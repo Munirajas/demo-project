@@ -1,0 +1,55 @@
+<div class="modal-content">
+  <form id="userForme" name="userForme"   ng-controller="bundleController" novalidate ng-submit="submitForm()">
+    <div class="modal-header">
+      <h4 class="modal-title" id="exampleModalLabel">Add/Edit Bundle Name</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="closePopUp()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="" class="ctrl-label">Bundle Name<span class="required">*</span></label>
+            <input type="text" class="form-control" id="name" name="name" ng-model="bundle.name" required/>
+            <span id="error" class="error-message" ng-show="showMessage(userForme.name)">Please enter Bundle Name.</span>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="" class="ctrl-label">Bundle Code<span class="required">*</span></label>
+            <input type="text" class="form-control" id="code" name="code" ng-model="bundle.code" required/>
+            <span id="error" class="error-message" ng-show="showMessage(userForme.code)">Please enter Bundle code.</span>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="" class="ctrl-label">Question Type<span class="required">*</span></label>
+                <div ng-repeat="q in questionTypeInfoDetails">
+                <input type="checkbox" ng-model="q.status" >{{q.type}}</input>
+                  </div>
+            </div>
+          </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+            <label for="" class="ctrl-label">Status<span class="required">*</span></label>
+<select class="form-control" id="status" name="status" ng-model="bundle.status" required>
+                <option value=''>Select</option>
+                <option value="Active">Active</option>
+                <option value="InActive">InActive</option>
+            </select>
+<span id="error" class="error-message" ng-show="showMessage(userForme.status)">Please select the status.</span>
+
+        </div>
+    </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-link" data-dismiss="modal" ng-click="closePopUp()">Cancel</button>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+
+  </form>
+</div>

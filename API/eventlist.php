@@ -9,7 +9,10 @@ $curdate = date('Y-m-d');
 $result = $sql->query($query);  
 $i=0;
 	while($row = $result->fetch_assoc()) {
+		
        $userInfo['currentEvent'][$i] = $row;
+
+
         $i++;
 	}
 

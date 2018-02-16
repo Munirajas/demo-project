@@ -1,0 +1,20 @@
+<div class="login-wrapper">
+	<div class="login-container">
+		
+		<h2 class="error-message">{{error}}</h2>
+		<form id="loginForm" name="loginForm" class="loginForm" novalidate ng-submit="submitForm(admin)"  ng-controller="loginController">
+			<div class="form-group">
+				<label for="username"><br>Email</label>
+				<input type="text" id="eamil" name="email" class="form-control" ng-model='admin.email' placeholder="Enter Email" required />
+				<span class="error-message" ng-show="showMessage(loginForm.email)">Please complete this field.</span>
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" ng-model='admin.password' required />
+				<span class="error-message" ng-show="showMessage(loginForm.password)">Please complete this field.</span>
+			</div>  			
+			<p class="text-center"><button type="submit" class="btn btn-primary">Submit</button></p>
+			<!-- <p class="bg-danger">{{errorMessage}}</p> -->
+		</form>
+	</div>
+</div>

@@ -1,0 +1,158 @@
+     body {
+         font-size: 14px;
+         color: #000;
+         font-family: Verdana, sans-serif;
+     }
+
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6 {
+         color: #000;
+         font-weight: bold;
+         margin: 0;
+     }
+
+     a,
+     a:hover,
+     a:focus {
+         color: #0000ff;
+         font-size: 14px;
+         text-decoration: underline;
+     }
+
+     p {
+         margin: 0;
+         font-size: 14px;
+         font-weight: normal;
+         line-height: 16px;
+     }
+
+     table td {
+         vertical-align: top;
+     }
+
+     .details-table th {
+         border: 1px solid #000;
+         font-size: 14px;
+         line-height: 16px;
+     }
+
+     .details-table td {
+         border: 1px solid #000;
+         font-size: 12px;
+         padding: 4px 2px;
+         line-height: 18px;
+     }
+
+     .main-wrapper {
+         max-width: 800px;
+         margin: 0 auto;
+         border: 1px solid green;
+     }
+
+     header {
+         text-align: center;
+         margin-bottom: 20px;
+         width: 90%;
+         margin: 0 auto;
+     }
+
+     footer {
+         width: 100%;
+     }
+
+     section {
+         width: 90%;
+         margin: 0 auto;
+     }
+
+     header p {
+         font-size: 11px;
+         line-height: 14px;
+     }
+
+     .header-logo {
+         max-width: 115px;
+     }
+
+     .org-name {
+         font-size: 14px;
+         line-height: 14px;
+     }
+
+     .date-block {
+         text-align: right;
+     }
+
+     .cin-number {
+         font-size: 14px;
+         line-height: 16px;
+         font-weight: normal;
+     }
+
+     .footer-stamp-logo {
+         max-width: 80px;
+         height: auto;
+         display: block;
+     }
+
+     table.quoted-table,
+     .quoted-table td,
+     .quoted-table th {
+         border: 1px solid #000;
+         text-align: center;
+         vertical-align: middle;
+         border-collapse: collapse;
+     }
+
+     .quoted-table th {
+         padding: 8px 5px;
+         font-size: 14px;
+     }
+
+     .quoted-table td {
+         padding: 5px 10px;
+     }
+
+     .quoted-table td.price-col {
+         text-align: right;
+     }
+
+     .final-price-block {
+         margin: 30px 0;
+         padding-left: 70px;
+     }
+
+     .final-price-block p {
+         font-size: 15px;
+         line-height: 20px;
+     }
+
+     .font-strong {
+         font-weight: bold;
+     }
+
+     .text-left {
+         text-align: left !important;
+     }
+
+     .text-strong-left {
+          font-weight: bold;
+          text-align: left !important;
+     }
+
+     .terms-table td {
+         text-align: left;
+     }
+
+     .bank-detail-table {
+         margin-top: 20px;
+     }
+
+     .bank-detail-table td {
+         font-weight: bold;
+         text-align: left;
+     }
