@@ -3,7 +3,7 @@
 
 header {
 	background-color:#00aeef;
-	padding:20px 0;
+	padding:12px 0;
 	height:80px;
 	position:fixed;
 	top:0;
@@ -18,8 +18,7 @@ header {
 		align-items:center;
 	}
 	.user-account {
-		max-width:120px;
-		align-self:flex-end;
+		max-width:120px;		
 		md-select {
 			margin:0;
 		}
@@ -30,11 +29,18 @@ header {
 			color:#fff;
 		}
 	}
+	.header-logo {
+		display: flex;
+		align-items: center;
+		.header-logo-image {
+			max-width:240px;
+		}
+	}
 }
 
 
 .main-wrapper {
-	padding-top:50px;
+	//padding-top:50px;
 	display: flex;
 	flex-direction: row;
 	@include breakpoint(xs-max) {
@@ -46,38 +52,59 @@ header {
 .left-col,.right-col {
 	width:25%;
 	height:100%;
-	padding:100px 20px 0;
+	padding:60px 20px 0;
 	display: flex;
-	background: rgba(237, 249, 253,0.3);
+	background: rgba(237, 249, 253,0.9);
 	height:calc(100vh - 80px);
 	@include breakpoint(xs-max) {  
 		padding:20px 15px;
 		width:100%;
 		height:100%;
 	}
+	@include breakpoint(lg) {
+		position: fixed;
+		width:25%;
+		top:80px;
+	}
 }
+.left-col {
+	@include breakpoint(lg) {
+		left:0;
+	}
+}
+.right-col {
+	@include breakpoint(lg) {
+		right:0;
+	}
+}
+
+
 .center-col {
 	width:50%;
 	display:flex;
 	flex-direction: column;
-	// border:1px solid #d3d3d3;
-	// border-width:0 1px;
+	border:1px solid #d3d3d3;
+	border-width:0 1px;
 	min-height: 100%;
-	padding:50px 25px 0;
+	padding:60px 30px 0;
 	@include breakpoint(xs-max) {
 		width:100%;
 		padding:20px 10px;
+	}
+	@include breakpoint(lg) {
+		margin:0 25%;
 	}
 }
 
 .page-title {
 	color:#00aeef;
 	font-size:20px;
-	margin:0px 0 20px;
+	margin:0px 0 35px;
 	text-transform: uppercase;
 	font-weight: bold;	
 	@include breakpoint(xs-max) {
 		font-size:18px;
+		margin-bottom: 15px;
 	}
 }
 .main-card {
@@ -178,8 +205,19 @@ header {
 .sub-header {
 	font-size:16px;
 	color: #8dc63f;
-	margin:0 0 20px;
+	margin:0 0 15px;
 	text-transform: uppercase;
+	position: relative;
+	&:after {
+		content:"";
+		display:block;
+		width:60px;
+		height:1px;
+		border-bottom: 1px dashed #ec008c;
+		position: absolute;
+		left:0;
+		bottom: 0;
+	}
 }
 
 
