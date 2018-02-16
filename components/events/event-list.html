@@ -19,7 +19,7 @@
 <div class="main-wrapper">
 	<div class="left-col">		
 	</div>
-	<div class="center-col ta-event-list-page">
+	<div class="center-col ta-event-list-page" ng-controller="eventController">
 		<h3 class="page-title">Event lists </h3>
 		<md-card class="main-card">
 			<md-tabs >
@@ -35,9 +35,11 @@
 									</p>
 								</div>
 								<div class="item-right-col">
-									<div class="time-icon event-start-timer" countdown='' date='February 12, 2018 12:00:00'>
+
+									<div class="time-icon event-start-timer" countdown='' date={{event.starttime}}>
 									</div>
 									<span class="time-text">to go</span>
+
 								</div> 
 							</div>
 							<div class="event-tool-bar">
