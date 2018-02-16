@@ -7,6 +7,12 @@ body {
   font-size: 1.4rem;
   font-family: "opensansregular", Helvetica, sans-serif; }
 
+md-input-container.md-default-theme label,
+md-input-container label,
+md-input-container.md-default-theme .md-placeholder,
+md-input-container .md-placeholder {
+  color: #111; }
+
 @font-face {
   font-family: 'opensanslight';
   src: url("../fonts/opensans/opensans-light-webfont.eot");
@@ -161,7 +167,7 @@ md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
 
 .sub-header {
   font-size: 16px;
-  color: #111;
+  color: #8dc63f;
   margin: 0 0 20px;
   text-transform: uppercase; }
 
@@ -254,5 +260,30 @@ md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
       text-decoration: none; }
       .assets-list li a:hover, .assets-list li a:focus {
         text-decoration: underline; }
+
+.event-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%; }
+  .event-left-col .presenter-image-wrapper {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 10rem; }
+    .event-left-col .presenter-image-wrapper img {
+      display: none; }
+    .event-left-col .presenter-image-wrapper h3.presenter-name-letter {
+      font-size: 54px;
+      color: #00aeef; }
+  .event-left-col .presenter-name {
+    font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */

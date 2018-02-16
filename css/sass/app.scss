@@ -67,6 +67,7 @@ header {
 	width:100%;
 	padding:20px;	
 	height: 100%;
+	min-height: calc(100vh - 100px);
 	margin: 0;
 }
 
@@ -156,7 +157,7 @@ header {
 }
 .sub-header {
 	font-size:16px;
-	color: #111;
+	color: #8dc63f;
 	margin:0 0 20px;
 	text-transform: uppercase;
 }
@@ -268,5 +269,35 @@ header {
 				text-decoration: underline;
 			}
 		}
+	}
+}
+
+.event-left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+	width: 100%;
+	.presenter-image-wrapper {
+		display: flex;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		border: 1px solid #111;
+		padding: 5px;
+		justify-content: center;
+		align-items: center;
+		background: #fff;
+		margin-bottom: 10rem;
+		img {
+			display: none;
+		}
+		h3.presenter-name-letter {
+			font-size: 54px;
+			color: #00aeef;
+		}
+	}
+	.presenter-name {
+		font-size: 20px;
 	}
 }
