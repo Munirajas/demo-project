@@ -8,7 +8,10 @@ var app = angular.module('tta',['ngRoute',
   '720kb.datepicker',
   'toaster',
   'ngFileUpload',
-  'ngIdle'
+  'ngIdle', 
+  'ngAnimate',
+  'ngMaterial',
+  'ngMessages'
   ]);
 
 

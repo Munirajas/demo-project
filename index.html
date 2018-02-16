@@ -1,83 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Angular Project</title>
     <base href="/">
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-        
-
+    <link href="css/style.css" rel="stylesheet">
     <script type="text/JavaScript" src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/JavaScript" src="js/angular.min.js"></script>
-    <script type="text/JavaScript" src="js/angular-route.min.js"></script>
+   <!--  <script type="text/JavaScript" src="js/angular.min.js"></script> -->
+   <!-- <script type="text/JavaScript" src="js/angular-route.min.js"></script> -->
+   <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>    
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
    
+    <script src="https://rawgit.com/hackedbychinese/ng-idle/master/angular-idle.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+    <script src="js/angular-datatables.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script type="text/JavaScript" src="js/angucomplete.js"></script>
+    <script type="text/JavaScript" src="js/angucomplete-alt.js"></script>
+    <!---Calendar -->
+    <script src="js/angular-datepicker.js"></script>
+    <link href="css/angular-datepicker.css" rel="stylesheet">
+    <!--end of Calendar files-->
+    <script src="js/ng-file-upload.min.js"></script>
+    <script src="js/ng-file-upload-shim.min.js"></script>
+    <script src="js/toaster.js"></script>
+    <link href="css/toaster.css" rel="stylesheet">
+    <script src="app.js"></script>
+</head>
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   
-
-
-
-
- <script src="https://rawgit.com/hackedbychinese/ng-idle/master/angular-idle.js">
-         
-     </script>
-
-
-
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-<script src="js/angular-datatables.min.js"></script>
-
-
-<script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
-<script type="text/JavaScript" src="js/angucomplete.js"></script>
-<script type="text/JavaScript" src="js/angucomplete-alt.js"></script>
-
-
-<!---Calendar -->
-
-<script src="js/angular-datepicker.js"></script>
-        <link href="css/angular-datepicker.css" rel="stylesheet">
-
-<!--end of Calendar files-->
-<script src="js/ng-file-upload.min.js"></script>
-
-<script src="js/ng-file-upload-shim.min.js"></script>
-
-<script src="js/toaster.js"></script>
-        <link href="css/toaster.css" rel="stylesheet">
-
-    <script src="app.js"></script>    
-   
-  </head>
-  <body ng-app="tta" ng-controller="mainController">      
-        <ng-view></ng-view>
-             
-        
-
-
+<body ng-app="tta" ng-controller="mainController">
+    <ng-view></ng-view>
     <!-- js files -->
-       <script src="../components/login/login-module.js"></script>
-      <script src="../components/login/loginController.js"></script>
-      <script src="../components/services/loginService.js"></script>
+    <script src="../components/login/login-module.js"></script>
+    <script src="../components/login/loginController.js"></script>
+    <script src="../components/services/loginService.js"></script>
+    <script src="../components/events/event-module.js"></script>
+    <script src="../components/events/event-controller.js"></script>
+    <script src="../components/services/event-service.js"></script>
+    <script src="../components/presenter/presenter-module.js"></script>
+    <script src="../components/presenter/presenterController.js"></script>
+    <script src="../components/services/presenter-service.js"></script>
+</body>
 
-            
-       <script src="../components/events/event-module.js"></script>
-      <script src="../components/events/event-controller.js"></script>
-      <script src="../components/services/event-service.js"></script>
-
-            
-       <script src="../components/presenter/presenter-module.js"></script>
-      <script src="../components/presenter/presenterController.js"></script>
-      <script src="../components/services/presenter-service.js"></script>
-
-  </body>
 </html>
