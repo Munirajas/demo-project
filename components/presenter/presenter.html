@@ -19,7 +19,7 @@
 <div class="main-wrapper">
 	<div class="left-col">			
 	</div>
-	<div class="center-col ta-event-list-page">
+	<div class="center-col ta-event-list-page hide">
 		<div class="blank-event">
 			<div class="blank-event-wrapper">
 				<h3>This event is going to start before 10 mins of a start time</h3>
@@ -31,15 +31,16 @@
 </div>
 
 
-<div class="main-wrapper">
+<div class="main-wrapper" ng-hide="presenterActive">
 	<div class="left-col">			
 	</div>
 	<div class="center-col ta-event-list-page">				
 		<div class="event-about-start">
 			<div class="event-about-start-wrapper">
-				<h3>This event will start in </h3>
+				<h3>This event will start in</h3>
+				
 				<div class="event-start-timer"
-				countdown='' date='January 1, 2019 12:00:00'>
+				countdownpresenter='' date="{{activeEvent.starttime}}">
 				</div>
 			</div>
 		</div>				
@@ -49,7 +50,7 @@
 </div>
 
 
-<div class="main-wrapper">
+<div class="main-wrapper" ng-show="presenterActive">
 	<div class="left-col">
 		<div class="event-left-col">
 			<div class="presenter-image-wrapper">
@@ -78,17 +79,21 @@
 					<ul class="qa-list">
 						<li class="qa-item" ng-repeat="qa in eventQAs track by $index">
 							<h4 class="question">{{qa.question}}</h4>
-
-							<div ng-repeat="ans in qa.answers">
+							<ul class="answers-given-list" >
+								<li ng-repeat="ans in qa.answers">
+									<p class="given-answer">{{ans.answer}}</p>
+									<p class="name-answerd"><span class="grey-color">Answered by</span> {{ans.name}}</p>
+							   </li>
+							</ul>
+							<!-- <div ng-repeat="ans in qa.answers">
 									<hr/>
 								<p class="answer">
 									{{ans.answer}}
 								</p>
-							</div>
-
-							<p class="qa-links text-right"> 
+							</div> -->
+							<!-- <p class="qa-links text-right"> 
 								<md-button class="md-primary">Reply</md-button>                            
-							</p>
+							</p> -->
 
 							<div class="answer-block">
 								<md-input-container class="md-block">
@@ -105,6 +110,10 @@
 				</div>
 			</md-card>
 		</div>
+		<div class="event-start-timer"
+		countdownreview='' date="{{activeEvent.totime}}">
+		</div>
+		<a href="/audience-pollqa" type="button">presenter</a>
 	</div>
 	<div class="right-col">	
 		<div class="assets-wrapper">

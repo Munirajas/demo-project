@@ -19,15 +19,15 @@
 <div class="main-wrapper">
     <div class="left-col">		
     </div>
-    <div class="center-col ta-event-list-page" ng-controller="eventController">
+    <div class="center-col ta-event-list-page" ng-controller="audienceController">
         <h3 class="page-title">Poll QA </h3>
         <md-card class="main-card">
             <div class="poll-qa-wrapper">
                 <ul class="poll-qa-list">
                     <li class="poll-qa-item">
                         <div class="poll-qa-item-wrapper">
-                            <h4 class="poll-qa">How was the presentation ?</h4>
-                            <md-radio-group ng-model="data.group1" class="poll-rating-list">
+                            <h4 class="poll-qa"> How was the presentation?</h4>
+                            <md-radio-group ng-model="rating1" class="poll-rating-list">
                                 <md-radio-button value="1">Bad</md-radio-button>
                                 <md-radio-button value="2"> Averege </md-radio-button>
                                 <md-radio-button value="3">Good</md-radio-button>
@@ -37,40 +37,40 @@
                     </li>
                     <li class="poll-qa-item">
                         <div class="poll-qa-item-wrapper">
-                            <h4 class="poll-qa">Is presenter audible ?</h4>                               
-                            <md-radio-group ng-model="data.group1" class="poll-rating-list">
-                                <md-radio-button value="11">Bad</md-radio-button>
-                                <md-radio-button value="12"> Averege </md-radio-button>
-                                <md-radio-button value="13">Good</md-radio-button>
-                                <md-radio-button value="14">Excelent</md-radio-button>                            
+                            <h4 class="poll-qa"> Is presenter audible?</h4>                               
+                            <md-radio-group ng-model="rating2" class="poll-rating-list">
+                                <md-radio-button value="1">Bad</md-radio-button>
+                                <md-radio-button value="2"> Averege </md-radio-button>
+                                <md-radio-button value="3">Good</md-radio-button>
+                                <md-radio-button value="4">Excelent</md-radio-button>                            
                             </md-radio-group>
                         </div>
                     </li>
                     <li class="poll-qa-item">
                         <div class="poll-qa-item-wrapper">
-                            <h4 class="poll-qa">Presenter grip on knowledge ?</h4>                               
-                            <md-radio-group ng-model="data.group1" class="poll-rating-list">
-                                <md-radio-button value="21">Bad</md-radio-button>
-                                <md-radio-button value="22"> Averege </md-radio-button>
-                                <md-radio-button value="23">Good</md-radio-button>
-                                <md-radio-button value="24">Excelent</md-radio-button>                            
+                            <h4 class="poll-qa">Presenter has sound knowledge on subject?</h4>                               
+                            <md-radio-group ng-model="rating3" class="poll-rating-list">
+                                <md-radio-button value="1">Bad</md-radio-button>
+                                <md-radio-button value="2"> Averege </md-radio-button>
+                                <md-radio-button value="3">Good</md-radio-button>
+                                <md-radio-button value="4">Excelent</md-radio-button>                            
                             </md-radio-group>
                         </div>
                     </li>
                     <li class="poll-qa-item">
                         <div class="poll-qa-item-wrapper">
-                            <h4 class="poll-qa">Overview ?</h4>                               
-                            <md-radio-group ng-model="data.group1" class="poll-rating-list">
-                                <md-radio-button value="31">Bad</md-radio-button>
-                                <md-radio-button value="32"> Averege </md-radio-button>
-                                <md-radio-button value="33">Good</md-radio-button>
-                                <md-radio-button value="34">Excelent</md-radio-button>                            
+                            <h4 class="poll-qa">Presenter overview rating</h4>                               
+                            <md-radio-group ng-model="rating4" class="poll-rating-list">
+                                <md-radio-button value="1">Bad</md-radio-button>
+                                <md-radio-button value="2"> Averege </md-radio-button>
+                                <md-radio-button value="3">Good</md-radio-button>
+                                <md-radio-button value="4">Excelent</md-radio-button>                            
                             </md-radio-group>
                         </div>
                     </li>
                 </ul>
                 <p class="text-right">
-                    <md-button class="md-raised md-primary">Send</md-button>
+                    <md-button class="md-raised md-primary" ng-click="savePresenterRating();">Send</md-button>
                 </p>
             </div>
         </md-card>
