@@ -30,11 +30,15 @@ app.config(function($routeProvider, $locationProvider) {
     templateUrl: 'components/audience/audience.html',
     controller: 'loginController'
   })
-  .when('/presenter', {
+  .when('/presenter-list', {
     templateUrl: 'components/presenter/presenter-list.html',
     controller: 'presenterController'
   })
-    .when('/events', {
+  .when('/presenter', {
+    templateUrl: 'components/presenter/presenter.html',
+    controller: 'presenterController'
+  })
+  .when('/events', {
     templateUrl: 'components/events/event-list.html',
     controller: 'eventController'
   })
