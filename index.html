@@ -30,26 +30,49 @@
   <!-- Angular Material Library -->
   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
    
-    <script src="https://rawgit.com/hackedbychinese/ng-idle/master/angular-idle.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-    <script src="js/angular-datatables.min.js"></script>
-    <script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
-    <script type="text/JavaScript" src="js/angucomplete.js"></script>
-    <script type="text/JavaScript" src="js/angucomplete-alt.js"></script>
-    <!---Calendar -->
-    <script src="js/angular-datepicker.js"></script>
-    <link href="css/angular-datepicker.css" rel="stylesheet">
-    <!--end of Calendar files-->
-    <script src="js/ng-file-upload.min.js"></script>
-    <script src="js/ng-file-upload-shim.min.js"></script>
-    <script src="js/toaster.js"></script>
-    <link href="css/toaster.css" rel="stylesheet">
-    <script src="app.js"></script>
-</head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
 
-<body ng-app="tta" ng-controller="mainController">
-    <ng-view></ng-view>
+
+
+
+ <script src="https://rawgit.com/hackedbychinese/ng-idle/master/angular-idle.js">
+         
+     </script>
+
+
+
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script src="js/angular-datatables.min.js"></script>
+
+
+<script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script type="text/JavaScript" src="js/angucomplete.js"></script>
+<script type="text/JavaScript" src="js/angucomplete-alt.js"></script>
+
+
+<!---Calendar -->
+
+<script src="js/angular-datepicker.js"></script>
+        <link href="css/angular-datepicker.css" rel="stylesheet">
+
+<!--end of Calendar files-->
+<script src="js/ng-file-upload.min.js"></script>
+
+<script src="js/ng-file-upload-shim.min.js"></script>
+
+<script src="js/toaster.js"></script>
+        <link href="css/toaster.css" rel="stylesheet">
+
+    <script src="app.js"></script>    
+   
+  </head>
+  <body ng-app="tta" ng-controller="mainController">     
+      <a href='/events'>EVENTS</a> 
+        <ng-view></ng-view>
+             
+        <script src="../components/services/rest-factory.js"></script>
     <!-- js files -->
     <script src="../components/login/login-module.js"></script>
     <script src="../components/login/loginController.js"></script>
@@ -60,6 +83,9 @@
     <script src="../components/presenter/presenter-module.js"></script>
     <script src="../components/presenter/presenterController.js"></script>
     <script src="../components/services/presenter-service.js"></script>
-</body>
+    <script type="text/JavaScript" src="js/angularjs-social-login.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+    <script type="text/javascript" src="js/angular-timer.js"></script>
 
+</body>
 </html>

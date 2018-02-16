@@ -7,7 +7,7 @@ app.service('bookService',['$http','restFactory','$q', function($http,restFactor
 
        getAllBooks : function(userId) {
          var defer = $q.defer();
-            var detail = [];
+         var detail = [];
          var endPoint = "API/book-list.php";//+ activityId + '?startDate=' + fromDates + '&endDate=' + toDates + '&status=' + type+'&format=true';
          $http({
                   method : 'GET',
@@ -19,8 +19,6 @@ app.service('bookService',['$http','restFactory','$q', function($http,restFactor
                 });
          
             return defer.promise;
-
-       
 
         //return defer.promise;
        },

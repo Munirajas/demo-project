@@ -8,20 +8,25 @@ var app = angular.module('tta',['ngRoute',
   '720kb.datepicker',
   'toaster',
   'ngFileUpload',
+  'ngIdle',
+  'socialLogin',
   'ngIdle', 
   'ngAnimate',
   'ngMaterial',
-  'ngMessages'
+  'ngMessages',
+  'timer'
   ]);
 
 
-app.config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider, $locationProvider, socialProvider) {
+  
+  socialProvider.setGoogleKey("977973052600-1ao204k1kc6boqpevtvj81tmia2gipea.apps.googleusercontent.com");
+
   $routeProvider
-  .when('/', {
+  .when('/eve', {
     templateUrl: 'components/login/login.html',
     controller: 'loginController'
   })  
-  
   .when('/login', {
     templateUrl: 'components/login/login.html',
     controller: 'loginController'
@@ -34,12 +39,10 @@ app.config(function($routeProvider, $locationProvider) {
     templateUrl: 'components/presenter/presenter-list.html',
     controller: 'presenterController'
   })
-    .when('/events', {
+  .when('/', {
     templateUrl: 'components/events/event-list.html',
     controller: 'eventController'
-  })
-  ;
-  ;
+  });
   // configure html5 to get links working on jsfiddle
   $locationProvider.html5Mode(true);
 });
@@ -57,10 +60,7 @@ app.run(['Idle', function(Idle) {
 
 app.controller('mainController', function($scope,$rootScope,$location){
   
- 
-  
-  $rootScope.logOut = function(){
-   
+  $rootScope.logOut = function(){ 
      localStorage.removeItem('user');
      $location.path('/login');
   }

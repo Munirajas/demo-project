@@ -26,104 +26,43 @@
 			<md-tabs >
 				<md-tab label="Upcoming Events">
 					<ul class="event-list">
-						<li class="event-list-item">
+						<li class="event-list-item" ng-repeat="event in events.currentEvent">
 							<div class="item-content">
 								<div class="item-left-col">
-									<h4 mat-line>Angular Js 1</h4>
-									<p mat-line>By<span class="presenter-name">Muniraja sudileti</span>
-									<p mat-line>On<span class="presenter-date">22-18</span>
-									at <span>11:00 A.M</span>
+									<h4 mat-line>{{event.event_name}}</h4>
+									<p mat-line>By<span class="presenter-name"> {{event.name}}</span>
+									<p mat-line>On<span class="presenter-date"> {{event.date}}</span>
+									at <span>{{event.from_time}}</span>
 									</p>
 								</div>
 								<div class="item-right-col">
-									<span class="time-icon">13</span>
+									<span class="time-icon" ng-bind="getEventToStart()">13</span>
 									<span class="time-text">Hours to go</span>
 								</div> 
 							</div>
 							<div class="event-tool-bar">
 								<ul class="event-tool-bar-list">
-									<li><md-button class="md-raised md-primary">Postpone</md-button></li>									
+									<li><md-button class="md-raised md-primary">Postpone</md-button></li>
 									<li><md-button class="md-raised tn-cancel-btn">Cancel</md-button></li>
-			                      
-								</ul>
+			                    </ul>
 							</div>
-						</li>
-						<li class="event-list-item">
-							<div class="item-content">
-								<div class="item-left-col">
-									<h4 mat-line>Angular Js 1</h4>
-									<p mat-line>By<span class="presenter-name">Muniraja sudileti</span>
-									<p mat-line>On<span class="presenter-date">22-18</span>
-									at <span>11:00 A.M</span>
-									</p>
-								</div>
-								<div class="item-right-col">
-									<span class="time-icon">13</span>
-									<span class="time-text">Hours to go</span>
-								</div> 
-								</div>
-						</li>
-						<li class="event-list-item">
-							<div class="item-content">
-								<div class="item-left-col">
-									<h4 mat-line>Angular Js 1</h4>
-									<p mat-line>By<span class="presenter-name">Muniraja sudileti</span>
-									<p mat-line>On<span class="presenter-date">22-18</span>
-									at <span>11:00 A.M</span>
-									</p>
-								</div>
-								<div class="item-right-col">
-									<span class="time-icon">13</span>
-									<span class="time-text">Hours to go</span>
-								</div> 
-								</div>
 						</li>
 					</ul> 
 				</md-tab>
 				<md-tab label="Past Events">
 					<md-content class="md-padding">					
 						<ul class="event-list">
-							<li class="event-list-item">
+							<li class="event-list-item" ng-repeat="event in events.pastEvent"> 
 								<div class="item-content">
 									<div class="item-left-col">
-										<h4 mat-line>Angular Js 1</h4>
-										<p mat-line>By<span class="presenter-name">Muniraja sudileti</span>
-										<p mat-line>On<span class="presenter-date">22-18</span>
-										at <span>11:00 A.M</span>
+										<h4 mat-line>{{event.event_name}}</h4>
+										<p mat-line>By<span class="presenter-name"> {{event.name}}</span>
+										<p mat-line>On<span class="presenter-date"> {{event.date}}</span>
+										at <span> {{event.from_time}}</span>
 										</p>
 									</div>
 									<div class="item-right-col">
-										<span class="time-icon">13</span>
-										<span class="time-text">Hours to ago</span>
-									</div> 
-								</div>										
-							</li>
-							<li class="event-list-item">
-								<div class="item-content">
-									<div class="item-left-col">
-										<h4 mat-line>Angular Js 1</h4>
-										<p mat-line>By<span class="presenter-name">Muniraja sudileti</span>
-										<p mat-line>On<span class="presenter-date">22-18</span>
-										at <span>11:00 A.M</span>
-										</p>
-									</div>
-									<div class="item-right-col">
-										<span class="time-icon">13</span>
-										<span class="time-text">Hours to go</span>
-									</div> 
-									</div>
-							</li>
-							<li class="event-list-item">
-								<div class="item-content">
-									<div class="item-left-col">
-										<h4 mat-line>Angular Js 1</h4>
-										<p mat-line>By<span class="presenter-name">Muniraja sudileti</span>
-										<p mat-line>On<span class="presenter-date">22-18</span>
-										at <span>11:00 A.M</span>
-										</p>
-									</div>
-									<div class="item-right-col">
-										<span class="time-icon">13</span>
+										<span class="time-icon">12{{getEventToStart()}}</span>
 										<span class="time-text">Hours to go</span>
 									</div> 
 									</div>
