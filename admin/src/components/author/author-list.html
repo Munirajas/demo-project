@@ -35,6 +35,8 @@
                           <th>From Time</th>
                           <th>To Time</th>
                            <th>Date</th> 
+                                                      <th>Review</th> 
+
                           <th>Edit</th>
                           <!-- <th>Delete</th> -->
                           <!-- <th class="ps-actions-col">Actions</th> -->
@@ -48,8 +50,10 @@
                           <td>{{value.from_time}}</td>
                           <td>{{value.to_time}}</td>
                            <td>{{value.date}}</td> 
+                           <td><span class="rating-icon" ng-click="graph()"><i class="fas fa-star"></i>{{value.avergae}}</span></td> 
+
                           <td>
-                              <a href="#" ng-click="editAuthor(value)">Edit</a>
+                              <a href="#" ng-click="graph(value)">Edit</a>
                           </td>
                           <!-- <td>
                               <a href="#" ng-click="deleteAuthor(value)">Delete</a>

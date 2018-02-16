@@ -103,7 +103,7 @@ app.config(function($routeProvider, $locationProvider) {
     controller: 'stateController'
   })
 
-.when('/admin/support', {
+.when('/admin/presenter', {
   templateUrl: '/admin/src/components/support/support-list.html',
   controller: 'supportController'
 })

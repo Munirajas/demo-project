@@ -11,11 +11,13 @@ $i=0;
 	while($row = $result->fetch_assoc()) {
 	   
 	   $datetime = $row['date'].' '.$row['from_time'];
-	  
+	  	   $datetotime = $row['date'].' '.$row['to_time'];
+
 
 	   $row['starttime'] = date('F d,Y H:i:s', strtotime($datetime));
 
-	 
+	 	   $row['totime'] = date('F d,Y H:i:s', strtotime($datetotime));
+
 	  
        $userInfo['currentEvent'][$i] = $row;
 
