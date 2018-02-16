@@ -17,7 +17,7 @@ angular.module('Login')
 
 	$scope.$on('event:social-sign-in-success', (event, userDetails)=> {
 		$scope.result = userDetails;
-		$location.path('/login');
+		//$location.path('/');
 		$scope.$apply();
 	});
 
