@@ -115,13 +115,14 @@ header {
   flex-direction: column;
   border: 1px solid #d3d3d3;
   border-width: 0 1px;
-  min-height: 100%;
+  min-height: calc(100vh - 80px);
   padding: 60px 30px 0; }
   @media (max-width: 767px) {
     .center-col {
       width: 96%;
       margin: 0 auto;
-      padding: 15px 10px; } }
+      padding: 15px 10px;
+      min-height: 100%; } }
   @media (min-width: 1200px) {
     .center-col {
       margin: 0 25%; } }
@@ -141,8 +142,9 @@ header {
   width: 100%;
   padding: 20px;
   height: 100%;
-  min-height: calc(100vh - 100px);
-  margin: 0; }
+  min-height: 100%;
+  margin: 0;
+  box-shadow: 0 1px 21px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12); }
   @media (max-width: 767px) {
     .main-card {
       min-height: 100%; } }
@@ -234,6 +236,14 @@ md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
     position: absolute;
     left: 0;
     bottom: 0; }
+
+.asked-qa {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem; }
+  @media (max-width: 767px) {
+    .asked-qa {
+      font-size: 1.8rem; } }
 
 .blank-event-wrapper {
   display: flex;

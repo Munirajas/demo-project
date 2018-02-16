@@ -1,1 +1,43 @@
-HI Presenter list
+<header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="header-wrapper">
+                        <div class="header-logo">
+                            <img src="admin/img/tta-logo.png" class="img-responsive header-logo-image" title="logo">
+                        </div>
+                        <div class="user-account">
+                            <md-select ng-model="weapon" placeholder="Muniraja " class="md-no-underline">
+                                <md-option value="axe">Logout</md-option>				          
+                            </md-select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <div class="left-col">		
+        </div>
+        <div class="center-col ta-event-list-page" ng-controller="eventController">
+            <h3 class="page-title">Answer for Questions </h3>
+            <md-card class="main-card">
+                <div class="poll-qa-wrapper">                   
+                    <div class="questions-item-wrapper">
+                        <h4 class="asked-qa">What is html ?</h4>
+                    </div>                        
+                    <div class="answerd-block">                        
+                        <p class="text-right">
+                            <!-- <md-button class="md-raised md-primary">Post Answer</md-button> -->
+                            <md-button class="md-raised md-warn">Next</md-button>
+                        </p>
+                    </div>
+                </div>
+            </md-card>
+        </div>
+        <div class="right-col">
+            	
+        </div>
+    </div>
+            
+            
