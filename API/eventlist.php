@@ -13,8 +13,9 @@ $i=0;
 	   $datetime = $row['date'].' '.$row['from_time'];
 	  
 
-	   $row['starttime'] = date('F m,Y H:i:s', strtotime($datetime));
+	   $row['starttime'] = date('F d,Y H:i:s', strtotime($datetime));
 
+	 
 	  
        $userInfo['currentEvent'][$i] = $row;
 
