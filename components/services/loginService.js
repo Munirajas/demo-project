@@ -9,7 +9,6 @@
           validateLogin : function(data) {
             var defer = $q.defer();
             var detail = [];
-
             var endPoint = "login.php"
             console.log(data);
             restFactory.postService(endPoint, data);

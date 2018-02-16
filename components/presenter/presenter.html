@@ -38,10 +38,10 @@
 		<div class="event-about-start">
 			<div class="event-about-start-wrapper">
 				<h3>This event will start in </h3>
-				<div class="event-start-timer">
+				<div class="event-start-timer"
+				countdown='' date='January 1, 2019 12:00:00'>
 					9 mins
 				</div>
-				<span countdown='' date='January 1, 2019 12:00:00'>&nbsp;</span>
 			</div>
 		</div>				
 	</div>
@@ -67,10 +67,10 @@
 				<div class="ask-question-wrapper">						
 					<md-input-container class="md-block">
 						<label>Ask  Question here</label>
-						<textarea ng-model="user.answer" md-maxlength="200" rows="1" md-select-on-focus></textarea>
+						<textarea ng-model="askQuestionContent" md-maxlength="200" rows="1" md-select-on-focus></textarea>
 					</md-input-container>		
 					<div class="text-right">
-						<md-button class="md-raised md-primary tn-btn">Ask</md-button>									
+						<md-button class="md-raised md-primary tn-btn" ng-click="askQuestion()">Ask</md-button>									
 						<md-button class="md-raised tn-cancel-btn tn-btn">Cancel</md-button>
 					</div>
 				</div>
