@@ -9,7 +9,13 @@ $curdate = date('Y-m-d');
 $result = $sql->query($query);  
 $i=0;
 	while($row = $result->fetch_assoc()) {
-		
+	   
+	   $datetime = $row['date'].' '.$row['from_time'];
+	  
+
+	   $row['starttime'] = date('F m,Y H:i:s', strtotime($datetime));
+
+	  
        $userInfo['currentEvent'][$i] = $row;
 
 
@@ -23,6 +29,10 @@ $i=0;
 $result = $sql->query($query);  
 
 	while($row = $result->fetch_assoc()) {
+		 $datetime = $row['date'].' '.$row['from_time'];
+	  
+
+	   $row['starttime'] = date('F m,Y H:i:s', strtotime($datetime));
        $userInfo['pastEvent'][$j] = $row;
   $j++;
 	}
