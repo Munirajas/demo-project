@@ -2,33 +2,36 @@ angular.module('Audience')
   .controller('audienceController', function($scope,  $rootScope, $routeParams, $location, presenterService) {
     var $audience = this;	 	
 
-    $presenter.activeEvent = $rootScope.activeEvent;
-    $rootScope.presenterRating = false;
+    $audience.activeEvent = $rootScope.activeEvent;
+    $rootScope.ratingActive = false;
     $scope.rating1 = 0;
     $scope.rating2 = 0;
     $scope.rating3 = 0;
     $scope.rating4 = 0;
 
     $scope.savePresenterRating = function() {
-      var questionObj = {};
+      var ratingObj = {};
 
-      if ($scope.askQuestionContent != '') {
-        //question content
-        questionObj.question = $scope.askQuestionContent;
-        //user id
-        questionObj.user_id = localStorage.getItem("user_id"); //get value from local storage
-        //event id
-        questionObj.event_id = $presenter.activeEvent.id; //get value from local storage
-        //post question service
-        presenterService.postEventQuestion(questionObj).then(function(_res) {
-          $scope.askQuestionContent = '';
-          getEventQuestionList();
+       if ( $audience.activeEvent.event_id != '' ) {
+        
+        ratingObj.question_one = $scope.rating1;
+        ratingObj.question_two = $scope.rating2;
+        ratingObj.question_three = $scope.rating3;
+        ratingObj.question_four = $scope.rating4;
+        ratingObj.event_id = $audience.activeEvent.event_id;
+        ratingObj.user_id =  localStorage.getItem("user_id");
+         //post rating 
+         presenterService.postEventRating(ratingObj).then(function(_res) {
+          $scope.rating1 = 0;
+          $scope.rating2 = 0;
+          $scope.rating3 = 0;
+          $scope.rating4 = 0;
+          $location.path('/events');
         });
       }
-    }
+  }
 
-
-});
+  });
 
 
 

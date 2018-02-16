@@ -21,10 +21,10 @@ var app = angular.module('tta',['ngRoute',
 
 app.config(function($routeProvider, $locationProvider, socialProvider) {
   
-  socialProvider.setGoogleKey("2370180840-1bv27h6ka34f0bt44bcvkjuaa2beqvn6.apps.googleusercontent.com");
+  //socialProvider.setGoogleKey("2370180840-1bv27h6ka34f0bt44bcvkjuaa2beqvn6.apps.googleusercontent.com");
 
   $routeProvider
-  .when('/', {
+  .when('/sdsd', {
     templateUrl: 'components/login/login.html',
     controller: 'loginController'
   })  
@@ -32,7 +32,7 @@ app.config(function($routeProvider, $locationProvider, socialProvider) {
     templateUrl: 'components/login/login.html',
     controller: 'loginController'
   })
-  .when('/audience', {
+  .when('/audience-pollqa', {
     templateUrl: 'components/auidence/audience.html',
     controller: 'audienceController'
   })
@@ -45,7 +45,7 @@ app.config(function($routeProvider, $locationProvider, socialProvider) {
     templateUrl: 'components/presenter/presenter.html',
     controller: 'presenterController'
   })
-  .when('/events', {
+  .when('/', {
     templateUrl: 'components/events/event-list.html',
     controller: 'eventController'
   });
@@ -125,6 +125,10 @@ app.directive('countdown', [
               $interval(function () {
                   var diff;
                   diff = Math.floor((future.getTime() - new Date().getTime()) / 1000);
+                  if (diff = 0 && $rootScope.ratingActive == false) {
+                      $rootScope.ratingActive = true;
+                      $location.path('/audience-pollqa');
+                  }
                   return element.text(Util.dhms(diff));
               }, 1000);
           }

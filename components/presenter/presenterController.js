@@ -2,7 +2,6 @@ angular.module('Presenter')
   .controller('presenterController', function($scope,  $rootScope, $routeParams, $location, presenterService) {
     var $presenter = this;	 	
 
-    console.log($rootScope.activeEvent);
     $presenter.activeEvent = $rootScope.activeEvent;
     $scope.askQuestionContent = '';
     $scope.answerQuestionContent = [];
