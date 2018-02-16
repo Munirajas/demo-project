@@ -65,8 +65,8 @@ header {
 }
 .main-card {
 	width:100%;
-	padding:20px;
-	height:550px;
+	padding:20px;	
+	height: 100%;
 	margin: 0;
 }
 
@@ -159,4 +159,114 @@ header {
 	color: #111;
 	margin:0 0 20px;
 	text-transform: uppercase;
+}
+
+
+
+
+.blank-event-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid rgb(244,81,30);
+	box-shadow: 0px 1px 18px rgba(244, 81, 30, 1);
+	margin:20px 0;
+	h3 {
+		line-height: 4.2rem;
+		width: 80%;
+		text-align: center;
+		margin: 0 auto;
+	}	
+}
+
+.event-about-start {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background: #fff;
+    border-radius: 15px;
+	border: 1px solid #00aeef;
+	box-shadow: 0px 1px 18px #00aeef;
+	margin:20px 0;
+	h3 {
+		line-height: 4.2rem;
+		width: 80%;
+		text-align: center;
+		margin: 0 auto;
+	}	
+	.event-start-timer {
+		width: 104px;
+		height: 104px;
+		border-radius: 50%;
+		margin: 20px auto;
+		text-align: center;
+		border: 1px solid #00aeef;
+		background: #00aeef;
+		color:#fff;
+		display: flex;
+		flex-direction: row;
+		font-size: 2.4rem;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+
+
+.qa-list {
+	margin:0;
+	padding:0;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	width:100%;
+	.qa-item {
+		padding-bottom:10px;
+		margin-bottom: 10px;
+		border-bottom:1px dashed #d3d3d3;
+		&:last-child {
+			border-bottom:none;
+		}
+		.question {
+			font-size: 1.5rem;
+			margin-bottom: 6px;
+			line-height: 19px;
+			color: #111;
+			font-weight: bold;
+		}
+		.answer {
+			font-size: 13px;
+			padding-left: 20px;
+			color: #6f6e6e;
+			line-height: 18px;
+		}
+	}
+}
+
+.assets-list {
+	margin:0;
+	padding:0;
+	list-style: disc;
+	list-style-position: inside;
+	display: flex;
+	flex-direction: column;
+	li {
+		margin:0;
+		padding:6px 0;
+		a {
+			color:#111;
+			font-size:13px;
+			font-weight:bold;
+			line-height: 1.8rem;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+	}
 }

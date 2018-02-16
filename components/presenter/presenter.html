@@ -1,3 +1,127 @@
 <header>
-	<h1>header</h1>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="header-wrapper">
+					<div class="header-logo">
+						<img src="../images" title="logo">
+					</div>
+					<div class="user-account">
+						<md-select ng-model="weapon" placeholder="Muniraja " class="md-no-underline">
+							<md-option value="axe">Logout</md-option>				          
+						</md-select>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </header>
+<div class="main-wrapper">
+	<div class="left-col">			
+	</div>
+	<div class="center-col ta-event-list-page">
+		<div class="blank-event">
+			<div class="blank-event-wrapper">
+				<h3>This event is going to start before 10 mins of a start time</h3>
+			</div>
+		</div>
+	</div>
+	<div class="right-col">					
+	</div>
+</div>
+
+
+<div class="main-wrapper">
+	<div class="left-col">			
+	</div>
+	<div class="center-col ta-event-list-page">				
+		<div class="event-about-start">
+			<div class="event-about-start-wrapper">
+				<h3>This event will start in </h3>
+				<div class="event-start-timer">
+						9 mins
+				</div>
+			</div>
+		</div>				
+	</div>
+	<div class="right-col">				
+	</div>
+</div>
+
+
+<div class="main-wrapper">
+	<div class="left-col">
+		<div class="event-left-col">
+			<div class="presenter-image-wrapper">
+				<img class="img-responsive" src="../images/.jpg">
+				<h3 class="presenter-name-letter">M</h3>
+			</div>
+			<h4 class="presenter-name">Muniraja Sudileti</h4>
+		</div>			
+	</div>
+	<div class="center-col ta-event-list-page">					
+		<div class="after-started">
+			<h3 class="page-title">Event Name </h3>
+			<md-card class="main-card">	
+				<div class="ask-question-wrapper">						
+					<md-input-container class="md-block">
+						<label>Ask  Question here</label>
+						<textarea ng-model="user.answer" md-maxlength="200" rows="1" md-select-on-focus></textarea>
+					</md-input-container>		
+					<div class="text-right">
+						<md-button class="md-raised md-primary tn-btn">Ask</md-button>									
+						<md-button class="md-raised tn-cancel-btn tn-btn">Cancel</md-button>
+					</div>
+				</div>
+				<div class="qa-wrapper">
+					<h5 class="sub-header">Asked questions</h5>
+					<ul class="qa-list">
+						<li class="qa-item">
+							<h4 class="question">What is html ?</h4>
+							<p class="answer">Lorem Ipsum is simply dummy text of the printing and 
+							typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+							text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+							
+							<p class="qa-links text-right"> 
+								<md-button class="md-primary">Reply</md-button>                            
+							</p>
+							<div class="answer-block">
+								<md-input-container class="md-block">
+									<label>Write a Answer here</label>
+									<textarea ng-model="user.answer" md-maxlength="200" rows="1" md-select-on-focus></textarea>
+								</md-input-container>
+								<p class="text-right">								
+									<md-button class="md-raised md-primary tn-btn">Send</md-button>									
+									<md-button class="md-raised tn-cancel-btn tn-btn">Cancel</md-button>
+								</p>   
+							</div>
+						</li>
+						<li class="qa-item">
+							<h4 class="question">What is html ?</h4>
+							<p class="answer">Lorem Ipsum is simply dummy text of the printing and 
+							typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+							text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</li>
+						<li class="qa-item">
+							<h4 class="question">What is html ?</h4>
+							<p class="answer">Lorem Ipsum is simply dummy text of the printing and 
+							typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+							text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</li>
+					</ul>
+				</div>
+			</md-card>
+		</div>
+	</div>
+	<div class="right-col">	
+		<div class="assets-wrapper">
+			<h4 class="sub-header text-center">Assets here</h4>
+			<ul class="assets-list">
+				<li><a href="#">Document name</a></li>
+				<li><a href="#">Document name</a></li>
+			</ul>
+		</div>						
+	</div>
+</div>
+		
+		
