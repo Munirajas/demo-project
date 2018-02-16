@@ -22,54 +22,59 @@
 	<div class="center-col ta-event-list-page" ng-controller="eventController">
 		<h3 class="page-title">Event lists </h3>
 		<md-card class="main-card">
-			<md-tabs >
+			<md-tabs md-dynamic-height md-border-bottom>
 				<md-tab label="Upcoming Events">
-					<ul class="event-list">
-						<li class="event-list-item" ng-repeat="event in events.currentEvent">
-							<div class="item-content">
-								<div class="item-left-col">
-									<h4 mat-line ng-click="getEventDetails(event)">{{event.event_name}}</h4>
-									<p mat-line>By<span class="presenter-name"> {{event.name}}</span>
-									<p mat-line>On<span class="presenter-date"> {{event.date}}</span>
-									at <span>{{event.from_time}}</span>
-									</p>
-								</div>
-								<div class="item-right-col">
-
-									<div class="time-icon event-start-timer" countdown='' date={{event.starttime}}>
+					<md-content class="md-padding">	
+						<ul class="event-list">
+							<li class="event-list-item" ng-repeat="event in events.currentEvent">
+								<div class="item-content">
+									<div class="item-left-col">
+										<h4 mat-line ng-click="getEventDetails(event)">{{event.event_name}}</h4>
+										<p mat-line>By<span class="presenter-name"> {{event.name}}</span>
+										<p mat-line>On<span class="presenter-date"> {{event.date}}</span>
+										at <span>{{event.from_time}}</span>
+										</p>
 									</div>
-									<span class="time-text">to go</span>
-
-								</div> 
-							</div>
-							<div class="event-tool-bar">
-								<ul class="event-tool-bar-list">
-									<li><md-button class="md-raised md-primary">Postpone</md-button></li>									
-									<li><md-button class="md-raised tn-cancel-btn">Cancel</md-button></li>			                      
-								</ul>
-							</div>
-						</li>
-					</ul> 
+									<div class="item-right-col">
+										<div class="time-icon event-start-timer" countdown='' date={{event.starttime}}>
+										</div>
+										<span class="time-text">to go</span>
+									</div> 
+								</div>
+								<!-- <div class="event-tool-bar">
+									<ul class="event-tool-bar-list">
+										<li><md-button class="md-raised md-primary">Postpone</md-button></li>									
+										<li><md-button class="md-raised tn-cancel-btn">Cancel</md-button></li>			                      
+									</ul>
+								</div> -->
+							</li>
+						</ul> 
+					</md-content>
 				</md-tab>
 				<md-tab label="Past Events">
 					<md-content class="md-padding">					
-						<ul class="event-list">
+						<ul class="event-list">							
 							<li class="event-list-item" ng-repeat="event in events.pastEvent"> 
 								<div class="item-content">
 									<div class="item-left-col">
 										<h4 mat-line>{{event.event_name}}</h4>
-										<p mat-line>By<span class="presenter-name"> {{event.name}}</span>
-										<p mat-line>On<span class="presenter-date"> {{event.date}}</span>
-										at <span> {{event.from_time}}</span>
+										<p>By<span class="presenter-name"> {{event.name}}</span>
+										<p>On<span class="presenter-date"> {{event.date}}</span>
+										at <span class="presenter-date"> {{event.from_time}}</span>
 										</p>
 									</div>
-									<div class="item-right-col">
+									<!-- <div class="item-right-col">
 										<span class="time-icon">12</span>
 										<span class="time-text">Hours to go</span>
-									</div> 
-									</div>
+									</div>  -->
+								</div>
 							</li>
 						</ul> 
+					</md-content>
+				</md-tab>
+				<md-tab label="canceled Events">
+					<md-content class="md-padding">          
+						<p>None of the events has been cancelled</p>
 					</md-content>
 				</md-tab>
 		</md-card>

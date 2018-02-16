@@ -109,6 +109,41 @@ header {
   .right-col {
     right: 0; } }
 
+.login-btn {
+  min-height: 54px; }
+  @media (max-width: 767px) {
+    .login-btn {
+      min-height: 44px; } }
+
+.login-main-wrapper {
+  width: 100%;
+  min-height: 100%;
+  position: relative; }
+  .login-main-wrapper .login-text {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px; }
+    @media (max-width: 767px) {
+      .login-main-wrapper .login-text {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px; } }
+  .login-main-wrapper .login-container {
+    width: 40%;
+    padding: 60px 30px;
+    border-radius: 10px;
+    box-shadow: 0 1px 21px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    max-width: 600px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media (max-width: 767px) {
+      .login-main-wrapper .login-container {
+        padding: 30px 20px; } }
+
 .center-col {
   width: 50%;
   display: flex;
@@ -151,13 +186,13 @@ header {
 
 .ta-event-list-page .event-list {
   padding: 0;
-  margin: 0;
-  list-style-type: 1;
+  margin: 20px 0 0;
+  list-style-type: none;
   display: flex;
   flex-direction: column; }
 .ta-event-list-page .event-list-item {
-  padding: 0 0 15px;
-  margin: 0 0 20px;
+  padding: 10px 0;
+  margin: 0 0 15px;
   border-bottom: 1px solid #d3d3d3;
   display: flex;
   align-items: flex-start;
@@ -171,26 +206,57 @@ header {
   flex-direction: row;
   justify-content: space-between;
   width: 100%; }
+  @media (max-width: 767px) {
+    .ta-event-list-page .item-content {
+      flex-direction: column; } }
   .ta-event-list-page .item-content .item-left-col {
     width: 80%;
     display: flex;
     flex-direction: column; }
+    @media (max-width: 767px) {
+      .ta-event-list-page .item-content .item-left-col {
+        width: 100%;
+        margin-bottom: 10px; } }
+    .ta-event-list-page .item-content .item-left-col h4 {
+      margin: 0 0 10px;
+      font-weight: bold;
+      text-transform: uppercase; }
+    .ta-event-list-page .item-content .item-left-col p {
+      margin: 0 0 4px;
+      line-height: 18px;
+      color: #777;
+      font-size: 13px; }
+    .ta-event-list-page .item-content .item-left-col .presenter-name {
+      color: #111;
+      font-weight: bold;
+      font-size: 15px; }
+    .ta-event-list-page .item-content .item-left-col .presenter-date {
+      color: #111;
+      font-weight: bold;
+      font-size: 15px; }
   .ta-event-list-page .item-content .item-right-col {
     width: 20%;
     display: flex;
     align-self: flex-end;
     align-items: center;
     flex-direction: column; }
+    @media (max-width: 767px) {
+      .ta-event-list-page .item-content .item-right-col {
+        width: 100%;
+        justify-content: center;
+        align-items: center; } }
   .ta-event-list-page .item-content .time-icon {
-    width: 60px;
-    height: 60px;
-    border: 1px solid green;
+    width: 94px;
+    height: 94px;
+    border: 1px solid #00aeef;
     border-radius: 50%;
-    font-size: 18px;
-    line-height: 60px;
+    font-size: 16px;
+    line-height: 21px;
     color: #fff;
+    display: flex;
     text-align: center;
-    background: blue; }
+    background: #00aeef;
+    align-items: center; }
   .ta-event-list-page .item-content .time-text {
     font-size: 13px;
     color: #333; }
