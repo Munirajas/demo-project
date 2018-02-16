@@ -21,10 +21,10 @@ var app = angular.module('tta',['ngRoute',
 
 app.config(function($routeProvider, $locationProvider, socialProvider) {
   
-  socialProvider.setGoogleKey("2370180840-1bv27h6ka34f0bt44bcvkjuaa2beqvn6.apps.googleusercontent.com");
+  //socialProvider.setGoogleKey("2370180840-1bv27h6ka34f0bt44bcvkjuaa2beqvn6.apps.googleusercontent.com");
 
   $routeProvider
-  .when('/', {
+  .when('/asd', {
     templateUrl: 'components/login/login.html',
     controller: 'loginController'
   })  
@@ -45,7 +45,7 @@ app.config(function($routeProvider, $locationProvider, socialProvider) {
     templateUrl: 'components/presenter/presenter.html',
     controller: 'presenterController'
   })
-  .when('/events', {
+  .when('/', {
     templateUrl: 'components/events/event-list.html',
     controller: 'eventController'
   });
@@ -64,7 +64,7 @@ app.run(['Idle', function(Idle) {
   Idle.watch();
 }]);
 
-app.controller('mainController', function($scope,$rootScope,$location){
+app.controller('mainController', function($scope, $rootScope,$location){
   
   $rootScope.logOut = function(){ 
      localStorage.removeItem('user');
@@ -73,6 +73,46 @@ app.controller('mainController', function($scope,$rootScope,$location){
 });
 
 app.directive('countdown', [
+  'Util',
+  '$interval',
+  function (Util, $interval) {
+      return {
+          restrict: 'A',
+          scope: { date: '@' },
+          link: function (scope, element) {
+              var future;
+              future = new Date(scope.date);
+              $interval(function () {
+                  var diff;
+                  diff = Math.floor((future.getTime() - new Date().getTime()) / 1000);
+                  return element.text(Util.dhms(diff));
+              }, 1000);
+          }
+      };
+  }
+]).directive('countdownpresenter', [
+  'Util',
+  '$interval',
+  '$rootScope',
+  function (Util, $interval, $rootScope) {
+      return {
+          restrict: 'A',
+          scope: { date: '@' },
+          link: function (scope, element) {
+              var future;
+              future = new Date(scope.date);
+              $interval(function () {
+                  var diff;
+                  diff = Math.floor((future.getTime() - new Date().getTime()) / 1000);
+                  if (diff <= 0 && $rootScope.presenterActive == false) {
+                    $rootScope.presenterActive = true;
+                  }
+                  return element.text(Util.dhms(diff));
+              }, 1000);
+          }
+      };
+  }
+]).directive('countdownreview', [
   'Util',
   '$interval',
   function (Util, $interval) {

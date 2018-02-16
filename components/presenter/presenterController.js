@@ -6,6 +6,7 @@ angular.module('Presenter')
     $presenter.activeEvent = $rootScope.activeEvent;
     $scope.askQuestionContent = '';
     $scope.answerQuestionContent = [];
+    $rootScope.presenterActive = false;
 
     $scope.askQuestion = function() {
       var questionObj = {};
