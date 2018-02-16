@@ -360,3 +360,29 @@ header {
 		font-size: 20px;
 	}
 }
+
+
+.poll-qa-list {
+    margin: 0;
+    list-style: decimal;
+    font-size: 18px;
+	list-style-position: outside;
+	li {
+		margin-bottom:10px;
+	}
+	md-radio-group.poll-rating-list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		md-radio-button {
+			width:50%;
+			margin-bottom: 5px;
+    		font-size: 16px;
+		}
+	}
+	md-radio-button .md-off, md-radio-button .md-on,
+	md-radio-button .md-container {		
+		width: 16px;
+		height: 16px;		
+	}
+}

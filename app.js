@@ -2,6 +2,7 @@ var app = angular.module('tta',['ngRoute',
   'Login',
   'Event',
   'Presenter',
+  'Audience',
   'ui.bootstrap',
   'angucomplete',
   'angucomplete-alt',
@@ -32,8 +33,8 @@ app.config(function($routeProvider, $locationProvider, socialProvider) {
     controller: 'loginController'
   })
   .when('/audience', {
-    templateUrl: 'components/audience/audience.html',
-    controller: 'loginController'
+    templateUrl: 'components/auidence/audience.html',
+    controller: 'audienceController'
   })
   .when('/presenter-list', {
     templateUrl: 'components/presenter/presenter-list.html',

@@ -341,4 +341,24 @@ md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
   .event-left-col .presenter-name {
     font-size: 20px; }
 
+.poll-qa-list {
+  margin: 0;
+  list-style: decimal;
+  font-size: 18px;
+  list-style-position: outside; }
+  .poll-qa-list li {
+    margin-bottom: 10px; }
+  .poll-qa-list md-radio-group.poll-rating-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .poll-qa-list md-radio-group.poll-rating-list md-radio-button {
+      width: 50%;
+      margin-bottom: 5px;
+      font-size: 16px; }
+  .poll-qa-list md-radio-button .md-off, .poll-qa-list md-radio-button .md-on,
+  .poll-qa-list md-radio-button .md-container {
+    width: 16px;
+    height: 16px; }
+
 /*# sourceMappingURL=style.css.map */
