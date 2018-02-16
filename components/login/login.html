@@ -1,0 +1,61 @@
+<div class="tab-content">
+	<div role="tabpanel">
+		<div class="row pad-t20">
+		 <form name="userForm" ng-submit="submitForm()" novalidate>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label></label>
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<div class="form-group">
+							<label>Username</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+							<input type="text" class="form-control" ng-model="user.name" required >
+							</div>
+					</div>
+				</div>
+				<div class="row">
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label></label>
+							</div>
+						</div>
+						<div class="col-sm-1">
+							<div class="form-group">
+								<label>Password</label>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="form-group">
+								<input type="password" class="form-control" ng-model="user.password" required >
+								</div>
+						</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label></label>
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<div class="form-group">
+							<label></label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+							<button class="btn btn-primary btn-lg btnNext pull-right"  ng-disabled="userForm.$invalid" ng-click="checkLogin()">Login</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
