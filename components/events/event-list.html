@@ -29,14 +29,14 @@
 						<li class="event-list-item" ng-repeat="event in events.currentEvent">
 							<div class="item-content">
 								<div class="item-left-col">
-									<h4 mat-line>{{event.event_name}}</h4>
+									<h4 mat-line ng-click="getEventDetails(event)">{{event.event_name}}</h4>
 									<p mat-line>By<span class="presenter-name"> {{event.name}}</span>
 									<p mat-line>On<span class="presenter-date"> {{event.date}}</span>
 									at <span>{{event.from_time}}</span>
 									</p>
 								</div>
 								<div class="item-right-col">
-									<span class="time-icon" ng-bind="getEventToStart()">13</span>
+									<span class="time-icon">13</span>
 									<span class="time-text">Hours to go</span>
 								</div> 
 							</div>
@@ -62,7 +62,7 @@
 										</p>
 									</div>
 									<div class="item-right-col">
-										<span class="time-icon">12{{getEventToStart()}}</span>
+										<span class="time-icon">12</span>
 										<span class="time-text">Hours to go</span>
 									</div> 
 									</div>
