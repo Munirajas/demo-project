@@ -32,7 +32,7 @@ app.config(function($routeProvider, $locationProvider, socialProvider) {
     templateUrl: 'components/login/login.html',
     controller: 'loginController'
   })
-  .when('/audience', {
+  .when('/audience-pollqa', {
     templateUrl: 'components/auidence/audience.html',
     controller: 'audienceController'
   })
@@ -125,6 +125,10 @@ app.directive('countdown', [
               $interval(function () {
                   var diff;
                   diff = Math.floor((future.getTime() - new Date().getTime()) / 1000);
+                  if (diff = 0 && $rootScope.ratingActive == false) {
+                      $rootScope.ratingActive = true;
+                      $location.path('/audience-pollqa');
+                  }
                   return element.text(Util.dhms(diff));
               }, 1000);
           }

@@ -43,6 +43,20 @@ app.service('presenterService', ['$http','$q', function($http,$q) {
             });
        
             return defer.promise;
+        },
+
+        postEventRating: function(data) {
+            var defer = $q.defer();
+            var detail = [];
+
+           $http.post('http://www.kavctrust.com/API/pollqa.php', data )
+                .then(function (success) {
+                    defer.resolve(success.data);
+                },function(error) {
+                    defer.resolve("Error");
+            });
+       
+            return defer.promise;
         }
     }
     
