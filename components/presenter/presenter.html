@@ -79,17 +79,21 @@
 					<ul class="qa-list">
 						<li class="qa-item" ng-repeat="qa in eventQAs track by $index">
 							<h4 class="question">{{qa.question}}</h4>
-
-							<div ng-repeat="ans in qa.answers">
+							<ul class="answers-given-list" >
+								<li ng-repeat="ans in qa.answers">
+									<p class="given-answer">{{ans.answer}}</p>
+									<p class="name-answerd"><span class="grey-color">Answered by</span> {{ans.name}}</p>
+							   </li>
+							</ul>
+							<!-- <div ng-repeat="ans in qa.answers">
 									<hr/>
 								<p class="answer">
 									{{ans.answer}}
 								</p>
-							</div>
-
-							<p class="qa-links text-right"> 
+							</div> -->
+							<!-- <p class="qa-links text-right"> 
 								<md-button class="md-primary">Reply</md-button>                            
-							</p>
+							</p> -->
 
 							<div class="answer-block">
 								<md-input-container class="md-block">
