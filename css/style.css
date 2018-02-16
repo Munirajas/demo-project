@@ -343,8 +343,8 @@ md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
     text-align: center;
     margin: 0 auto; }
   .event-about-start .event-start-timer {
-    width: 104px;
-    height: 104px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     margin: 20px auto;
     text-align: center;
@@ -427,7 +427,8 @@ md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
       display: none; }
     .event-left-col .presenter-image-wrapper h3.presenter-name-letter {
       font-size: 54px;
-      color: #00aeef; }
+      color: #00aeef;
+      margin: 0; }
   .event-left-col .presenter-name {
     font-size: 20px; }
 
