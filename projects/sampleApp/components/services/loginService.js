@@ -10,17 +10,14 @@
             var defer = $q.defer();
             var detail = [];
 
-             $http.post('API/login.php', data )
-              .then(function (success) {
-                       defer.resolve(success.data);
-                },function(error){
-                    defer.resolve("Error");
-                });
-         
+            var endPoint = "login.php"
+            console.log(data);
+            restFactory.postService(endPoint, data);
             return defer.promise;
           }
       }
-      
-      return loginObj;
+       return loginObj;
+
+
 }]);
 
