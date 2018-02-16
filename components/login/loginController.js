@@ -19,7 +19,9 @@ angular.module('Login')
 		$scope.result = userDetails;
 
 		loginService.validateLogin($scope.result).then(function(_res) {
-			console.log(_res);
+			console.log(_res.userInfo.userDetails.id);
+			localStorage.setItem('user_id', _res.userInfo.userDetails.id);
+
 		   $location.path('/events');
 		$scope.$apply();
     	});
