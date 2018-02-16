@@ -9,7 +9,12 @@ var app = angular.module('tta',['ngRoute',
   'toaster',
   'ngFileUpload',
   'ngIdle',
-  'socialLogin'
+  'socialLogin',
+  'ngIdle', 
+  'ngAnimate',
+  'ngMaterial',
+  'ngMessages',
+  'timer'
   ]);
 
 
@@ -18,7 +23,7 @@ app.config(function($routeProvider, $locationProvider, socialProvider) {
   socialProvider.setGoogleKey("977973052600-1ao204k1kc6boqpevtvj81tmia2gipea.apps.googleusercontent.com");
 
   $routeProvider
-  .when('/', {
+  .when('/eve', {
     templateUrl: 'components/login/login.html',
     controller: 'loginController'
   })  
@@ -34,7 +39,7 @@ app.config(function($routeProvider, $locationProvider, socialProvider) {
     templateUrl: 'components/presenter/presenter-list.html',
     controller: 'presenterController'
   })
-  .when('/events', {
+  .when('/', {
     templateUrl: 'components/events/event-list.html',
     controller: 'eventController'
   });

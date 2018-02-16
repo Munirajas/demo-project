@@ -13,7 +13,7 @@
             var endPoint = "login.php"
             console.log(data);
             restFactory.postService(endPoint, data);
-          return defer.promise;
+            return defer.promise;
           }
       }
        return loginObj;

@@ -7,11 +7,12 @@ angular.module('tta')
     .constant('API_KEY', '')
     .constant('BASE_URL', 'http://www.kavctrust.com/API/')
     .factory('restFactory', function($http) {
+
       return {
         postService : function(_url, _data) {
           return $http({
             method : 'POST',
-            url : BASE_URL + _url,
+            url : 'http://www.kavctrust.com/API/' + _url,
             data : JSON.stringify(_data),
             headers : {
               'Content-Type' : 'application/json'
@@ -21,12 +22,11 @@ angular.module('tta')
         getService : function(_url) {
           return $http({
             method : 'GET',
-            url : BASE_URL + _url,
+            url : 'http://www.kavctrust.com/API/' + _url,
             withCredentials : false,
             headers : {
               'Content-Type' : 'application/json',
-              'Accept' : 'application/json',
-              'Authorization' : apmKey
+              'Accept' : 'application/json'
             }
           });
         },
@@ -36,8 +36,7 @@ angular.module('tta')
             url : BASE_URL + _url,
             data : JSON.stringify(_data),
             headers : {
-              'Content-Type' : 'application/json',
-              'Authorization' : apmKey
+              'Content-Type' : 'application/json'
             }
           });
         }
