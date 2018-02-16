@@ -1,0 +1,72 @@
+<div class="modal-content">
+    <form id="userForm" name="userForm" ng-controller="authorController" novalidate ng-submit="submitForm(author)">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Add/Edit author Name</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="closePopUp()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="" class="ctrl-label">Event Name<span class="required">*</span></label>
+              <input type="text" class="form-control" id="name" name="name" ng-model="author.name" required/>
+              <span id="error" class="error-message" ng-show="showMessage(userForm.name)">Please enter author Name.</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="" class="ctrl-label">Presenter<span class="required">*</span></label>
+
+                <select class="form-control" id="id_user" name="id_user" ng-model="author.id_user" required>
+                            <option ng-repeat="supportData in supportInfoDetails" value="{{supportData.id}}">{{supportData.name}}</option>
+                        </select>
+
+
+             
+              <span id="error" class="error-message" ng-show="showMessage(userForm.id_user)">Please enter author email.</span>
+            </div>
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+              <label for="" class="ctrl-label">From Time<span class="required">*</span></label>
+              <input type="text" class="form-control" id="from_time" name="from_time" ng-model="author.from_time" required/>
+              <span id="error" class="error-message" ng-show="showMessage(userForm.from_time)">Please enter from_time.</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="" class="ctrl-label">To Time<span class="required">*</span></label>
+              <input type="text" class="form-control" id="to_time" name="to_time" ng-model="author.to_time" required/>
+              <span id="error" class="error-message" ng-show="showMessage(userForm.to_time)">Please enter to_time no.</span>
+            </div>
+          </div>
+    </div>
+     <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+              <label for="" class="ctrl-label">Date<span class="required">*</span></label>
+              <input type="date" class="form-control" id="date" name="date" ng-model="author.date" required/>
+              <span id="error" class="error-message" ng-show="showMessage(userForm.date)">Please enter date.</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="" class="ctrl-label">Description<span class="required">*</span></label>
+              <input type="text" class="form-control" id="description" name="description" ng-model="author.description" required/>
+              <span id="error" class="error-message" ng-show="showMessage(userForm.description)">Please enter description no.</span>
+            </div>
+          </div>
+    </div>
+      
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-link" data-dismiss="modal" ng-click="closePopUp()">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+  
+    </form>
+  </div>

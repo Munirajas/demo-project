@@ -1,0 +1,148 @@
+<div class="modal-content">
+    <form id="userForm" name="userForm"  novalidate ng-submit="submitForm(client)">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Add/Edit Validity Date</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="closePopUp()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="" class="ctrl-label">Reference No.<span class="required">*</span></label>
+              <input type="text" class="form-control" id="ref_no" name="ref_no" ng-model="client.ref_no" required/>
+              <span id="error" class="error-message" ng-show="showMessage(userForm.ref_no)">Please Enter Reference no.</span>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="" class="ctrl-label">Client Name<span class="required">*</span></label>
+              <input type="text" class="form-control" id="pdf_name" name="pdf_name" ng-model="client.pdf_name" required/>
+              <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_name)">Please Enter Name.</span>
+            </div>
+          </div>
+       
+        
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="" class="ctrl-label">Designation<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pdf_design" name="pdf_design" ng-model="client.pdf_design" required/>
+                <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_design)">Please Enter Design.</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="" class="ctrl-label">Institute Name<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pdf_institute" name="pdf_institute" ng-model="client.pdf_institute" required/>
+                <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_institute)">Please Enter Institute Name.</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="" class="ctrl-label">Address<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pdf_address" name="pdf_address" ng-model="client.pdf_address" required/>
+                <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_address)">Please Enter Address.</span>
+              </div>
+            </div>
+            </div>
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="" class="ctrl-label">City<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pdf_city" name="pdf_city" ng-model="client.pdf_city" required/>
+                <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_city)">Please Enter City.</span>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="" class="ctrl-label">State<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pdf_state" name="pdf_state" ng-model="client.pdf_state" required/>
+                <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_state)">Please Enter State.</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="" class="ctrl-label">Zip Code<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pdf_zip" name="pdf_zip" ng-model="client.pdf_zip" required/>
+                <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_zip)">Please Enter Zip Code.</span>
+              </div>
+            </div>
+          </div> 
+        
+        <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="" class="ctrl-label">Subject<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pdf_sub" name="pdf_sub" ng-model="client.pdf_sub" required/>
+                <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_sub)">Please Enter Subject.</span>
+              </div>
+            </div>
+          
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="" class="ctrl-label">Support of 5 Credits<span class="required">*</span></label>
+                <input type="checkbox" value="required" ng-model="client.pdf_sas" >
+                <!-- <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_sas)">Please enter Validity Date.</span> -->
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="" class="ctrl-label">Quantity<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pdf_qty" name="pdf_qty" ng-model="client.pdf_qty" required/>
+                <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_qty)">Please Enter Quantity.</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="" class="ctrl-label">Total<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pdf_total" name="pdf_total" ng-model="client.pdf_total" required/>
+                <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_total)">Please Enter Total.</span>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="" class="ctrl-label">Discount<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pdf_discount" name="pdf_discount" ng-model="client.pdf_discount" required/>
+                <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_discount)">Please Enter Discount.</span>
+              </div>
+            </div>
+          </div>
+            <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="" class="ctrl-label">GST<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pdf_gst" name="pdf_gst" ng-model="client.pdf_gst" required/>
+                <input type="hidden" class="form-control" id="pdf_finaltotal" name="pdf_finaltotal" ng-model="client.pdf_finaltotal" />
+                <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_gst)">Please Enter GST.</span>
+              </div>
+            </div>
+          
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="" class="ctrl-label">Subscription<span class="required">*</span></label>
+              <input type="text" class="form-control" id="pdf_subscription" name="pdf_subscription" ng-model="client.pdf_subscription"/>
+              <span id="error" class="error-message" ng-show="showMessage(userForm.pdf_subscription)">Please Enter Subscription.</span>
+            </div>
+          </div>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-link" data-dismiss="modal" ng-click="closePopUp()">Cancel</button>
+        <button type="submit" class="btn btn-primary">Update & Print</button>
+        <button type="submit" class="btn btn-primary">Print</button>
+      </div>
+  
+    </form>
+  </div>

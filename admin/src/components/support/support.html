@@ -1,0 +1,81 @@
+<div class="modal-content">
+    <form id="userForm" name="userForm" ng-controller="supportController" novalidate ng-submit="submitForm(support)">
+        <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Add/Edit AE</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="closePopUp()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="ctrl-label">Name<span class="required">*</span></label>
+                        <input type="text" class="form-control" id="name" name="name" ng-model="support.name" required/>
+                        <span id="error" class="error-message" ng-show="showMessage(userForm.name)">Please enter Name.</span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="ctrl-label">Email<span class="required">*</span></label>
+                        <input type="text" class="form-control" id="email" name="email" ng-model="support.email" required/>
+                        <span id="error" class="error-message" ng-show="showMessage(userForm.email)">Please enter Email.</span>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="ctrl-label">Mobile<span class="required">*</span></label>
+                        <input type="mobile" class="form-control" id="mobile" name="mobile" ng-model="support.mobile" required/>
+                        <span id="error" class="error-message" ng-show="showMessage(userForm.mobile)">Please enter Mobile.</span>
+
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="ctrl-label">Photo</label>
+                        <input type="file" class="form-control" id="photo" name="photo" ngf-select ng-model="support.photo"/>
+                        <span id="error" class="error-message" ng-show="showMessage(userForm.photo)">Please select a photo.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="ctrl-label">Designation<span class="required">*</span></label>
+                        <input type="text" class="form-control" id="designation" name="designation" ng-model="support.designation" required/>
+                        <span id="error" class="error-message" ng-show="showMessage(userForm.designation)">Please enter designation.</span>
+
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="ctrl-label">About Presenter</label>
+                        <input type="text" class="form-control" id="about_presenter" name="about_presenter"  ng-model="support.about_presenter"/>
+                        <span id="error" class="error-message" ng-show="showMessage(userForm.about_presenter)">Please add details.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="ctrl-label">Status<span class="required">*</span></label>
+          <select class="form-control" id="status" name="status" ng-model="support.status" required>
+                            <option value=''>Select</option>
+                            <option value="Active">Active</option>
+                            <option value="InActive">InActive</option>
+                        </select>
+          <span id="error" class="error-message" ng-show="showMessage(userForm.status)">Please select the status.</span>
+          
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-link" data-dismiss="modal" ng-click="closePopUp()">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+
+    </form>
+</div>

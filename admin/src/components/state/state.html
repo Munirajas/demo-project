@@ -1,0 +1,40 @@
+<div class="modal-content">
+    <form name="userForm" ng-controller="stateController" novalidate ng-submit="submitForm(state)">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Add/Edit user</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="closePopUp()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"><br>
+          <div class="row">
+              <div class="col-sm-6">
+                 <div class="form-group">
+                     <label for="" class="ctrl-label">State Name</label>
+                     <input type="text" class="form-control" id="state_name" name="state_name" ng-model="state.state_name" required/>
+                     <span id="error" class="error-message" ng-show="showMessage(userForm.state_name)">Enter state name.</span>
+                 </div>                    
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+                <label for="" class="ctrl-label">Status<span class="required">*</span></label>
+    <select class="form-control" id="status" name="status" ng-model="state.status" required>
+                    <option value=''>Select</option>
+                    <option value="Active">Active</option>
+                    <option value="InActive">InActive</option>
+                </select>
+    <span id="error" class="error-message" ng-show="showMessage(userForm.status)">Please select the status.</span>
+    
+            </div>
+        </div>
+          
+            </div>
+            <div class="modal-footer">
+          <button type="button" class="btn btn-link" data-dismiss="modal" ng-click="closePopUp()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+        </div>
+      </div>
+      </form>
+      </div>
+
