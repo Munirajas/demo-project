@@ -169,14 +169,14 @@ header {
 .ta-event-list-page {
     .event-list {
          padding:0;
-         margin:0;
-         list-style-type:1;
+         margin:20px 0 0;
+         list-style-type:none;
          display: flex;
          flex-direction: column;
     }
     .event-list-item {
-        padding:0 0 15px;
-        margin:0 0 20px;
+        padding:10px 0;
+        margin:0 0 15px;
         border-bottom:1px solid #d3d3d3;
         display: flex;
         align-items: flex-start;
@@ -190,30 +190,66 @@ header {
     .item-content {
          display: flex;
          flex-direction: row;
-         justify-content: space-between;
-         width:100%;        
+		 justify-content: space-between;		 
+		 width:100%;        
+		 @include breakpoint(xs-max) {
+			flex-direction: column;
+		 }
         .item-left-col {
             width:80%;
             display: flex;
-            flex-direction: column;
+			flex-direction: column;
+			@include breakpoint(xs-max) {
+				width:100%;
+				margin-bottom: 10px;
+			}
+			h4 {
+				margin:0 0 10px;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			p{
+				margin:0 0 4px;
+				line-height:18px;
+				color:#777;
+				//font-weight: bold;
+				font-size:13px;
+			}
+			.presenter-name {
+				color:#111;
+				font-weight: bold;
+				font-size:15px;
+			}
+			.presenter-date {
+				color:#111;
+				font-weight: bold;
+				font-size:15px;
+			}
         }
         .item-right-col {
             width:20%;
             display: flex;
             align-self: flex-end;   
             align-items: center;                  
-            flex-direction: column;
+			flex-direction: column;
+			@include breakpoint(xs-max) {
+				width:100%;
+				justify-content: center;
+				align-items: center;
+			}
         }
         .time-icon {
-            width:60px;
-            height:60px;
-            border:1px solid green;
-            border-radius: 50%;   
-            font-size: 18px;
-            line-height: 60px;
-            color:#fff;
-            text-align: center;
-            background: blue;
+            width: 94px;
+			height: 94px;
+			border: 1px solid #00aeef;
+			border-radius: 50%;
+			font-size: 16px;
+			line-height: 21px;
+			color: #fff;
+			display: flex;
+			text-align: center;
+			background: #00aeef;
+			align-items: center;
         }
         .time-text {
             font-size:13px;
