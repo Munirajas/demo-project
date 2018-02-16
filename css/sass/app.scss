@@ -206,14 +206,15 @@ header {
 	font-size:16px;
 	color: #8dc63f;
 	margin:0 0 15px;
+	padding:0 0 10px;
 	text-transform: uppercase;
 	position: relative;
 	&:after {
 		content:"";
 		display:block;
 		width:60px;
-		height:1px;
-		border-bottom: 1px dashed #ec008c;
+		height:2px;
+		border-bottom: 2px dashed #ec008c;
 		position: absolute;
 		left:0;
 		bottom: 0;
@@ -309,17 +310,17 @@ header {
 .assets-list {
 	margin:0;
 	padding:0;
-	list-style: disc;
+	list-style: circle;
 	list-style-position: inside;
 	display: flex;
 	flex-direction: column;
 	li {
 		margin:0;
-		padding:6px 0;
+		padding:3px 0;
 		a {
 			color:#111;
-			font-size:13px;
-			font-weight:bold;
+			font-size:14px;
+			//font-weight:bold;
 			line-height: 1.8rem;
 			text-decoration: none;
 			&:hover,
