@@ -39,8 +39,9 @@
 			<div class="event-about-start-wrapper">
 				<h3>This event will start in </h3>
 				<div class="event-start-timer">
-						9 mins
+					9 mins
 				</div>
+				<span countdown='' date='January 1, 2019 12:00:00'>&nbsp;</span>
 			</div>
 		</div>				
 	</div>
@@ -56,12 +57,12 @@
 				<img class="img-responsive" src="../images/.jpg">
 				<h3 class="presenter-name-letter">M</h3>
 			</div>
-			<h4 class="presenter-name">Muniraja Sudileti</h4>
+			<h4 class="presenter-name">{{activeEvent.name}}</h4>
 		</div>			
 	</div>
 	<div class="center-col ta-event-list-page">					
 		<div class="after-started">
-			<h3 class="page-title">Event Name </h3>
+			<h3 class="page-title">{{activeEvent.event_name}}</h3>
 			<md-card class="main-card">	
 				<div class="ask-question-wrapper">						
 					<md-input-container class="md-block">

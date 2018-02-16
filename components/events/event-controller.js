@@ -1,13 +1,20 @@
 angular.module('Event')
-  .controller('eventController', function($scope,  $routeParams, $location, eventService, $timeout) {
+  .controller('eventController', function($scope,$window,  $rootScope, $routeParams, $location, eventService, $timeout) {
     var $ctrl = this;	 	
 	
     function getEvents() {
-
+    
       eventService.getAllEvents().then(function(_res) {
           $scope.events = _res;
       }); 
       
+    }
+
+    $scope.getEventDetails = function(event) {
+      $rootScope.activeEvent = event;
+      console.log("event controller");
+      console.log(event);
+      $location.path('/presenter');
     }
 
     $scope.getEventToStart = function() {
@@ -18,7 +25,7 @@ angular.module('Event')
         var endMilli= timer[0]*60*60*1000;
         endMilli += timer[1]*60*1000
         endMilli += timer[2]*1000;
-        
+
         if(endMilli > 0) {
           var endTime = new Date(Date.now()+endMilli);   
           var tId = setInterval(function() {
