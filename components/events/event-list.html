@@ -20,7 +20,7 @@
 	<div class="left-col">
 		
 	</div>
-	<div class="center-col ta-event-list-page">
+	<div class="center-col ta-event-list-page" ng-controller="eventController">
 		<h3 class="page-title">Event lists </h3>
 		<md-card class="main-card">
 			<md-tabs >
@@ -36,7 +36,7 @@
 									</p>
 								</div>
 								<div class="item-right-col">
-									<span class="time-icon" ng-bind="getEventToStart()">13</span>
+									<span class="time-icon">13</span>
 									<span class="time-text">Hours to go</span>
 								</div> 
 							</div>
@@ -62,7 +62,7 @@
 										</p>
 									</div>
 									<div class="item-right-col">
-										<span class="time-icon">12{{getEventToStart()}}</span>
+										<span class="time-icon">12</span>
 										<span class="time-text">Hours to go</span>
 									</div> 
 									</div>

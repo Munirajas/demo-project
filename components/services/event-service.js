@@ -5,7 +5,7 @@ app.service('eventService',['$http','$q', 'restFactory', function($http, $q, res
                 getAllEvents : function() {
                   var defer = $q.defer();
                   var detail = [];
-                  var endPoint = "http://www.kavctrust.com/API/eventlist.php";
+                  var endPoint = "API/eventlist.php";
                   $http({
                            method : 'GET',
                            url : endPoint

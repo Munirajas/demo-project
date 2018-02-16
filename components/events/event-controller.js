@@ -6,6 +6,7 @@ angular.module('Event')
 
       eventService.getAllEvents().then(function(_res) {
           $scope.events = _res;
+          console.log($scope.events);
       }); 
       
     }
