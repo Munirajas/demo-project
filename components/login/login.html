@@ -1,6 +1,11 @@
 <div class="tab-content">
 	<div role="tabpanel">
 		<div class="row pad-t20">
+		
+		<button g-login type="button">Google Login</button>
+		<button ng-click="signout()" type="button">signout</button>
+
+		<h4>result: {{result}}</h4>
 		 <form name="userForm" ng-submit="submitForm()" novalidate>
 			<div class="col-sm-12">
 				<div class="row">
@@ -11,7 +16,7 @@
 					</div>
 					<div class="col-sm-1">
 						<div class="form-group">
-							<label>Username  new</label>
+							<label>Username</label>
 						</div>
 					</div>
 					<div class="col-sm-3">
@@ -34,7 +39,7 @@
 						<div class="col-sm-3">
 							<div class="form-group">
 								<input type="password" class="form-control" ng-model="user.password" required >
-								</div>
+							</div>
 						</div>
 				</div>
 				<div class="row">
