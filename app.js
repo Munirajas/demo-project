@@ -1,5 +1,7 @@
 var app = angular.module('tta',['ngRoute',
   'Login',
+  'Event',
+  'Presenter',
   'ui.bootstrap',
   'angucomplete',
   'angucomplete-alt',
@@ -20,7 +22,21 @@ app.config(function($routeProvider, $locationProvider) {
   .when('/login', {
     templateUrl: 'components/login/login.html',
     controller: 'loginController'
-  });
+  })
+  .when('/audience', {
+    templateUrl: 'components/audience/audience.html',
+    controller: 'loginController'
+  })
+  .when('/presenter', {
+    templateUrl: 'components/presenter/presenter-list.html',
+    controller: 'presenterController'
+  })
+    .when('/events', {
+    templateUrl: 'components/events/event-list.html',
+    controller: 'eventController'
+  })
+  ;
+  ;
   // configure html5 to get links working on jsfiddle
   $locationProvider.html5Mode(true);
 });
