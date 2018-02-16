@@ -1,0 +1,22 @@
+### User Authenticate
+{
+    "name": "srikanth pavuluri",
+    "email": "srikanth.pavuluri@costrategix.com",
+    "profile_pic": "profile_pic.png"
+}
+
+### Event listing
+{
+    "id": 1,
+    "event_name": "",
+    "event_date": "2018-02-12",
+    "event_start_time": "12.21",
+    "event_to_time": "13.20",
+    "event_description": "some description",
+    "user_id": 1,
+    "asset_files": {
+        0 : "file.pdf",
+        1 : "file2.pdf",
+        2 : "file3.pdf",
+    }
+}
