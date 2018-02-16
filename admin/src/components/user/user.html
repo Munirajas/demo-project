@@ -1,0 +1,169 @@
+<div class="modal-content">
+    <form name="userForm"  novalidate ng-submit="submitForm(userForm)" >
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Add/Edit user</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="closePopUp()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"><br>
+          <div class="row">
+                <div class="col-sm-6">
+                <div class="form-group">
+                        <label for="" class="ctrl-label">College Name<span class="required">*</span></label>
+                        <input type="text" class="form-control" id="college_name" name="college_name" ng-model="user.college_name" required/>
+                        <span id="error" class="error-message" ng-show="showMessage(userForm.college_name)">Enter your College Name.</span>
+                    </div> 
+                    </div>
+                    <div class="col-sm-6">
+                    <div class="form-group">
+                            <label for="" class="ctrl-label">Hod Name<span class="required">*</span></label>
+                            <input type="text" class="form-control" id="hod_name" name="hod_name" ng-model="user.hod_name" required/>
+                            <span id="error" class="error-message" ng-show="showMessage(userForm.hod_name)">Enter your Hod Name.</span>
+                        </div>
+                        </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-6">
+                   <div class="form-group">
+                                <label for="" class="ctrl-label">Professor Name<span class="required">*</span></label>
+                                <input type="text" class="form-control" id="professor_name" name="professor_name" ng-model="user.professor_name" required/>
+                                <span id="error" class="error-message" ng-show="showMessage(userForm.professor_name)">Enter your Professor Name.</span>
+                 </div>
+                </div>
+                 <div class="col-sm-6">
+                 <div class="form-group">
+                     <label for="" class="ctrl-label">Email<span class="required">*</span></label>
+                     <input type="text" id="email" name="email" class="form-control" ng-model="user.email" required/>
+                     <span id="error" class="error-message" ng-show="showMessage(userForm.email)">Enter Email Id.</span>
+                 </div>                    
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="ctrl-label">Package_Type</label>
+                        <select class="form-control" id="package_type" name="package_type" ng-model="user.package_type" required>
+                            <option value="Basic">Basic Support</option>
+                            <option value="Premium">Premium Support</option>
+                        </select>
+                          
+                    </div>                    
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="ctrl-label">Password<span class="required">*</span></label>
+                        <input type="password" class="form-control" id="password" name="password" ng-model="user.password" required>
+                        <span id="error" class="error-message" ng-show="showMessage(userForm.password)">Enter your Password.</span>
+                    
+                    </div>                    
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="ctrl-label">Support Name<span class="required">*</span></label>
+                        <select class="form-control" id="id_support" name="id_support"  ng-model="user.id_support" >
+                            <option value=''>Select</option>
+                            <option ng-repeat = "sup in supportInfoDetails"
+                                value="{{sup.id}}">{{sup.name}}</option>
+                                </select>
+                    
+                    </div>                    
+                </div>
+                <!-- <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="" class="ctrl-label">Bundle Name<span class="required">*</span></label>
+                        <select class="form-control" id="id_bundle" name="id_bundle"  ng-model="user.id_bundle" required>
+                                                        <option value=''>Select</option>
+
+                            <option ng-repeat = "b in bundleInfoDetails"
+                                value="{{b.id}}">{{b.name}}</option>
+                                </select>
+                        <span id="error" class="error-message" ng-show="showMessage(userForm.id_bundle)">Please select the Bundle.</span>
+                    </div>                    
+                </div> -->
+                <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="" class="ctrl-label">Bundle Name<span class="required">*</span></label>
+                      <div ng-repeat="q in bundleInfoDetails">
+                      <input type="checkbox" ng-model="q.status">{{q.name}}</input>
+                                    
+                            </div> 
+                       </div>
+                   </div>
+                </div>
+                <div class="row">
+                        <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="" class="ctrl-label">Site Id<span class="required">*</span></label>
+                                    <input type="text" class="form-control" id="site_id" name="site_id" ng-model="user.site_id" required>
+                                    <span id="error" class="error-message" ng-show="showMessage(userForm.site_id)">Enter your Site Id.</span>
+                                
+                </div>
+                </div>
+                <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="ctrl-label">Phone Number<span class="required">*</span></label>
+                            <input type="text" class="form-control" id="phoneno" name="phoneno" ng-model="user.phoneno" required>
+                            <span id="error" class="error-message" ng-show="showMessage(userForm.phoneno)">Enter your Phone No.</span>
+                        
+                        </div>                    
+                    </div>  
+
+                        </div>
+                  <div class="row">
+                        <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="" class="ctrl-label">State<span class="required">*</span></label>
+                                    <select class="form-control" id="state" name="state" ng-model="user.state" required>
+                                        <option value="">Select State</option>
+                                        <option ng-repeat="s in stateInfoDetails"
+                                        value="{{s.id}}">{{s.state_name}}</option>
+                                        </select>
+                                        <span id="error" class="error-message" ng-show="showMessage(userForm.state)">Enter your State.</span>
+                                
+                                </div>                    
+                        </div>
+                        <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="" class="ctrl-label">Status<span class="required">*</span></label>
+              <select class="form-control" id="status" name="status" ng-model="user.status" required>
+                                <option value=''>Select</option>
+                                <option value="Active">Active</option>
+                                <option value="InActive">InActive</option>
+                            </select>
+              <span id="error" class="error-message" ng-show="showMessage(userForm.status)">Please select the status.</span>
+              
+                        </div>
+                    </div>
+                       <!--  <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="" class="ctrl-label">Purchase No<span class="required">*</span></label>
+                                    <input type="text" class="form-control" id="purchase_no" name="purchase_no" ng-model="user.purchase_no" required>
+                                    <span id="error" class="error-message" ng-show="showMessage(userForm.purchase_no)">Enter purchase No.</span>
+                                
+                                </div>                    
+                        </div> -->
+                    </div>
+                    <div class="row">
+                       <!-- <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="" class="ctrl-label">Date<span class="required">*</span></label>
+                                    <input type="text" class="form-control" id="date" name="date" ng-model="user.date" required>
+                                    <span id="error" class="error-message" ng-show="showMessage(userForm.date)">Enter Date.</span>
+                                
+                                </div>                    
+                            </div> -->
+                    
+                </div>
+                
+        <div class="modal-footer">
+          <button type="button" class="btn btn-link" data-dismiss="modal" ng-click="closePopUp()">Cancel</button>
+          <button type="submit" class="btn btn-primary" >Save</button>
+        </div>
+        </div>
+      </div>
+      </form>
+      </div>
+

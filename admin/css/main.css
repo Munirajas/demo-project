@@ -1,0 +1,245 @@
+/*-->
+CUSTOM FONTS
+<--*/
+
+@font-face {
+    font-family: 'opensanslight';
+    src: url('../fonts/opensans-light-webfont.eot');
+    src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-light-webfont.woff') format('woff'),
+         url('../fonts/opensans-light-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-light-webfont.svg#opensanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'opensansregular';
+    src: url('../fonts/opensans-regular.eot');
+    src: url('../fonts/opensans-regular.eot?#iefix') format('embedded-opentype'),         
+         url('../fonts/opensans-regular.woff') format('woff'),
+         url('../fonts/opensans-regular.ttf') format('truetype'),
+         url('../fonts/opensans-regular.svg#opensansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'opensanssemibold';
+    src: url('../fonts/opensans-semibold-webfont.eot');
+    src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-semibold-webfont.woff') format('woff'),
+         url('../fonts/opensans-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-semibold-webfont.svg#opensanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'opensansbold';
+    src: url('../fonts/opensans-bold-webfont.eot');
+    src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-bold-webfont.woff') format('woff'),
+         url('../fonts/opensans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-bold-webfont.svg#opensansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{font-family: 'opensansregular'; font-size: 14px; color: #666666;}
+ul{ list-style: none; margin: 0px; padding: 0px;}
+a{ color: #2dabef;}
+.main-header.navbar {margin-bottom: 0px;background-color: #fff;padding-top: 15px;padding-bottom: 15px;border-bottom: 1px solid #dedede;}
+.main-header .navbar-brand{background: url(../img/nano_logo.png) no-repeat left top transparent;text-indent: -9999px;display: block;width: 154px;height: 70px;}
+.main-header .navbar-nav>li>a {color: #000;font-size: 16px; background: none; position: relative;}
+.main-header .navbar-nav>li>a:hover, .main-header .navbar-nav>li>a:focus {background: none; color: #00a2fa;}
+.main-header .navbar-nav>li.active>a {font-family: 'opensanssemibold'; color: #00a2fa;}
+.main-header .btn.btn.btn {background-color: #4caf50;border-color: #4caf50;color: #fff;margin-top: 5px;font-size: 16px;}
+.main-header .btn:hover, .main-header .btn:focus, .main-header .btn:active{ background-color: #439a47; border-color: #439a47; color: #fff;}
+.btn-outline-inverse:active, .btn-outline-inverse:focus, .btn-outline-inverse:hover { color: #00a2fa; text-shadow: none;    background-color: #fff; border-color: #fff;
+}
+.pad-t20 { padding-top: 20px;}
+.pad-t10 { padding-top: 10px;}
+.pad-t30 { padding-top: 30px;}
+.pad-t25 { padding-top: 25px;}
+.pad-b10 { padding-bottom :10px;}
+.pad-b20 { padding-bottom :20px;}
+.pad-b50 { padding-bottom :50px;}
+.pad-full { padding: 20px 20px 5px 20px;}
+.hmar-10 { margin-left: -10px; margin-right: -10px;}
+.hpad-10 { padding-left: 10px; padding-right: 10px;}
+.hmar-0 { margin-left: 0px; margin-right: 0px;}
+.hpad-0 { padding-left: 0px; padding-right: 0px;}
+.mar-t7 { margin-top: 7px;}
+.pad-b5 { padding-bottom: 5px;}
+.mar-t0{ margin-top: 0px;}
+.mar-t30 {
+    margin-top: 30px;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fbfbfb;
+    padding: 10px 20px 20px 20px;
+    border-top: 5px solid #2dabef;    
+}
+
+.form-control {
+    height: 40px;
+}
+
+.btn-primary.btn-primary {
+    background-color: #f15a29;
+    border-color: #f15a29;
+    height: 40px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #fb7a50;
+    border-color: #f15a29;
+}
+
+.btn-secondary {
+    background-color: #fafdff;
+    border-color: #00a2fa;
+    color: #00a2fa;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active  {
+    background-color: #00a2fa;
+    border-color: #00a2fa;
+    color: #fff;
+}
+
+.modal-title {
+    display: inline-block;
+    color: #333;    
+}
+
+.customer-title {
+    margin-top: 0px;
+}
+
+.customer-label {
+    text-transform: uppercase;
+    color: #ccc;
+    font-weight: normal;
+}
+
+
+.footer-wrapper { border-top: 1px solid #dedede; padding-top: 20px; padding-bottom: 10px;}
+
+.gray-box {
+    padding: 20px;
+    background-color: #fafdff;
+}
+
+.gray-box .title {
+    color: #00a2fa;
+    margin-top: 0px;
+}
+
+.angucomplete-dropdown {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 1200px){
+    .main-header .navbar-nav>li{ padding-left: 20px; padding-right: 20px;}
+    
+}
+
+@media screen and (min-width: 768px){
+    .main-header.navbar>.container .navbar-brand{margin-left: 0px;}
+    .main-header .navbar-nav{ margin-top: 10px;}    
+    .main-header .navbar-nav>li>a {padding-left: 0px;padding-right: 0px;}
+    .main-header .navbar-nav>li.active>a:after { position: absolute; content: ''; width: 100%; height: 1px; bottom: 5px; left: 0px; display: block; background-color: #00a2fa;}
+    .main-header .navbar-brand.navbar-brand { margin-left: 0px;}    
+
+    .sm-pull-right {
+        float: right;
+    }
+    .footer-wrapper ul { padding-top: 30px; padding-bottom: 10px;}
+    .footer-wrapper ul li { padding-bottom: 10px;}
+    .footer-wrapper ul li a { color: #a6aab2; font-size: 16px;}
+    .footer-wrapper ul li a:hover { text-decoration: none; color: #fff;}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    .main-header .navbar-nav>li{ padding-left: 10px; padding-right: 10px;}
+}
+
+@media screen and (max-width: 991px){
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px){ 
+    .main-header .navbar-nav>li{ padding-left: 5px; padding-right: 5px;}
+    .main-header .navbar-nav>li>a, .main-header .btn.btn.btn{font-size: 14px;}    
+}
+@media screen and (max-width: 767px){
+    .main-header .navbar-brand {margin-left: 15px;}
+    .navbar-toggle { border-color: #00a2fa; margin-top: 20px;}
+    .navbar-toggle .icon-bar { background-color:#00a2fa; }
+    .nav>li { border-top: 1px solid #f1f1f1;}
+}
+
+.header {
+    color:#00a2fa;
+    font-size: 24px;
+    font-weight:700;
+    margin-bottom: 10px;    
+}
+.list-table {
+    position: relative;
+    padding-top:10px;
+    margin:20px 0;
+}
+.table-topbar {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    flex-direction: column;
+
+}
+.list-table .form-control {
+    height: 40px;
+    padding:6px 15px 6px 20px;
+    font-size: 15px;
+}
+ul.list {
+    display: block;
+    list-style-position: inside;
+    padding-left: 20px;
+}
+ul.list li {
+    font-size:15px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    list-style-type: circle;
+}
+
+span.required {
+    padding-left: 5px;
+    color: #ff0000;
+    font-weight: 700;
+    }
+.error-message {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: #ff0000;
+    line-height: 14px;
+    }    

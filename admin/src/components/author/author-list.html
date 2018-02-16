@@ -1,0 +1,72 @@
+
+
+<div class="container">
+    <div class="pad-b50">
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 class="header">Event List</h3>
+       
+        </div>
+    </div>    
+      <toaster-container toaster-options="{'time-out': 7000}"></toaster-container>
+      
+      <div class="table-responsive list-table">      
+        <div class="table-topbar">
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+              <div class="lhs-search">
+                <!-- <label>Search by product Name</label> -->
+                <input type="text" ng-model="search.name" placeholder="Search by Author Name" class="form-control" />
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <button class="btn btn-primary sm-pull-right" ng-click="addNewAuthor()">Add New Event
+              </button>
+            </div>
+          </div>
+        </div>
+        <table dt-options="dtOptions" datatable="ng" dt-options="dtOptions" class="table table-striped table-bordered" width="100%">
+          <thead>
+          <tr>
+                          <th>Id</th>
+                          <th>Name</th>
+                          <th>User</th>
+                          <th>From Time</th>
+                          <th>To Time</th>
+                           <th>Date</th> 
+                          <th>Edit</th>
+                          <!-- <th>Delete</th> -->
+                          <!-- <th class="ps-actions-col">Actions</th> -->
+                      </tr>
+          </thead>
+          <tbody>
+        <tr ng-repeat="value in authorInfoDetails | filter:search">
+                          <td>{{value.id}}</td>
+                          <td>{{value.event_name}}</td>
+                          <td>{{value.id_user}}</td>
+                          <td>{{value.from_time}}</td>
+                          <td>{{value.to_time}}</td>
+                           <td>{{value.date}}</td> 
+                          <td>
+                              <a href="#" ng-click="editAuthor(value)">Edit</a>
+                          </td>
+                          <!-- <td>
+                              <a href="#" ng-click="deleteAuthor(value)">Delete</a>
+                          </td> -->
+                      
+                          <!-- <td class="ps-actions-col">
+                                                                  <a href="#" class="ps-action-btn ps-action-edit" ng-click="edithotel(hotel)">
+                                                                      <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                                  </a>
+                          
+                                                              </td>
+                           -->
+                      </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  
