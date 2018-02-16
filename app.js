@@ -20,10 +20,10 @@ var app = angular.module('tta',['ngRoute',
 
 app.config(function($routeProvider, $locationProvider, socialProvider) {
   
-  //socialProvider.setGoogleKey("977973052600-1ao204k1kc6boqpevtvj81tmia2gipea.apps.googleusercontent.com");
+  socialProvider.setGoogleKey("2370180840-1bv27h6ka34f0bt44bcvkjuaa2beqvn6.apps.googleusercontent.com");
 
   $routeProvider
-  .when('/eve', {
+  .when('/', {
     templateUrl: 'components/login/login.html',
     controller: 'loginController'
   })  
@@ -44,7 +44,7 @@ app.config(function($routeProvider, $locationProvider, socialProvider) {
     templateUrl: 'components/presenter/presenter.html',
     controller: 'presenterController'
   })
-  .when('/', {
+  .when('/events', {
     templateUrl: 'components/events/event-list.html',
     controller: 'eventController'
   });

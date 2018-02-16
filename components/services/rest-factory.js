@@ -12,7 +12,7 @@ angular.module('tta')
         postService : function(_url, _data) {
           return $http({
             method : 'POST',
-            url : 'http://www.kavctrust.com/API/' + _url,
+            url : 'API/' + _url,
             data : JSON.stringify(_data),
             headers : {
               'Content-Type' : 'application/json'
@@ -22,7 +22,7 @@ angular.module('tta')
         getService : function(_url) {
           return $http({
             method : 'GET',
-            url : 'http://www.kavctrust.com/API/' + _url,
+            url : 'API/' + _url,
             withCredentials : false,
             headers : {
               'Content-Type' : 'application/json',

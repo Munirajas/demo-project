@@ -5,18 +5,50 @@ angular.module('Presenter')
     console.log($rootScope.activeEvent);
     $presenter.activeEvent = $rootScope.activeEvent;
     $scope.askQuestionContent = '';
-    $presenter.answer = '';
+    $scope.answerQuestionContent = [];
 
     $scope.askQuestion = function() {
-      //question content
-      var askQuestion = $scope.askQuestionContent;
-      //user id
-      var userId = localStorage.getItem("user_id"); //get value from local storage
-      //event id
-      var eventId = $presenter.activeEvent.id; //get value from local storage
+      var questionObj = {};
 
-
+      if ($scope.askQuestionContent != '') {
+        //question content
+        questionObj.question = $scope.askQuestionContent;
+        //user id
+        questionObj.user_id = localStorage.getItem("user_id"); //get value from local storage
+        //event id
+        questionObj.event_id = $presenter.activeEvent.id; //get value from local storage
+        //post question service
+        presenterService.postEventQuestion(questionObj).then(function(_res) {
+          $scope.askQuestionContent = '';
+          getEventQuestionList();
+        });
+      }
     }
+
+    $scope.answerQuestion = function(questionId) {
+      var answerObj = {};
+        if ($scope.answerQuestionContent != '') {
+          //question content
+          answerObj.answer = $scope.answerQuestionContent[0];
+          //user id
+          answerObj.user_id = localStorage.getItem("user_id"); //get value from local storage
+          //question id
+          answerObj.question_id = questionId; //get value from local storage
+          //post question service
+          presenterService.postQuestionAnswer(answerObj).then(function(_res) {
+            $scope.answerQuestionContent = [];
+            getEventQuestionList();
+          });
+        }
+    }
+
+    getEventQuestionList = function() {
+      presenterService.getEventQuestions($presenter.activeEvent.id).then(function(_res) {
+        $scope.eventQAs = _res; 
+      });
+    }
+
+    getEventQuestionList();
 });
 
 
