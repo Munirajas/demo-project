@@ -10,7 +10,7 @@
             var defer = $q.defer();
             var detail = [];
 
-             $http.post('API/login.php', data )
+             $http.post('http://www.kavctrust.com/API/login.php', data )
               .then(function (success) {
                        defer.resolve(success.data);
                 },function(error){
